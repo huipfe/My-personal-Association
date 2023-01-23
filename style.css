@@ -1,3 +1,35 @@
+/* Global Color, use for entierly project */
+body {
+    /* Bark */
+    color: #2e2300;
+    /* Seaweed Green */
+    color: #6e6702;
+    /* Bronze */
+    color: #C05805;
+    /* Goldenrod */
+    color: #db9501;
+}
+
+.bg-1 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-4 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
 /* First Page */
 
 
