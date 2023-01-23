@@ -10,9 +10,14 @@ body {
     color: #db9501;
 }
 
+.bg-0 {
+    background-color: #C05805;
+        color: #ffffff;  V
+}
+
 .bg-1 {
     background-color: #1abc9c;
-    color: #ffffff;
+        color: #ffffff;
 }
 
 .bg-2 {
@@ -79,3 +84,26 @@ body {
 
 
 /* 2e Pages */
+
+
+
+
+
+
+
+
+
+/* Scrollbar personnalisé */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: aqua;
+}
+
+::-webkit-scrollbar-thumb {
+    background: aquamarine;
+}
+
+/*# sourceMappingURL=style.css.map */
