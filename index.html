@@ -4,24 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS File-->
+    <!-- Description of the website (150 to 180 char maximun)-->
+    <meta name="description" content="Lorem Ipsum">
+    <!-- Local CSS File-->
     <link rel="stylesheet" href="style.css">
-
     <!-- Local Bootstrap 5.3.0 -->
     <link href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>My personal Association - "Les Petits Chiens du monde"</title>
+    <!-- My personal Association -->
+    <title>Les Petits Chiens du monde</title>
 </head>
 
-<body>
+<body class="container-fluid bg-site">
 
-    <!-- Header part -->
-<header>
+    <!-- Header part - Navigation -->
+<header class="container-fluid bg-site">
+
+
+    <section id="navigation">
+            <!-- md (Medium) est mieux que sm (small) ici, pour la transition de la barre -->
+        <nav class="navbar navbar-dark navbar-expand-md bg-0">
+    
+            <!-- Contenur qui permet les marges -->
+            <div class="container-fluid">
+    
+                <a href="#LOREM1" class="d-flex align-items-center fs-4 text-white sm-2">
+                    <img src="image/NOM PRENOM SITE MAJ.png" width="100" height="100" class="me-3" alt="ILAN-TERVIL-LOGO">
+                </a>
+                <!--<h1 class="navbar-brand">Port'folio</h1>-->
+                <h1 class="badge navbar-brand sm-6">Lorem ipsum.</h1>
+
+                <!-- Bouton, quand la barre s'effondre (disparrait) après un point de rupture (lg ici)-->
+                <!-- cliquer dessus pour faire réparaitre les éléments de la barre de navig quand on est en lg-->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation">
+                    <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
+            <a href="#LOREM1"></a> <img src="image/Chien langue & non langue picto.png" width="60" height="60" class="me-2" alt="Chien langue & non langue picto"></a>
+                </button>
+    
+                <!-- collapse permet de faire s'effondrer (disparraitre) la barre de navig, 
+        quand on est en dessous du lg (point de rupture)-->
+    
+                <header class="collapse navbar-collapse p-3 mb-3" id="navbarNavDropdown">
+    
+                    <div class="container">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
+    
+                            <ul class="navbar-nav bg-0 col-12 col-md-auto me-md-auto mb-2 justify-content-center mb-md-5">
+                                <li class="nav-item">
+                                    <a href="#LOREM1" class="nav-link color-white-link">LOREM 1</a>
+                                    <!-- active permet de mettre en surbrillance l'élement -->
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="#LOREM2" class="nav-link color-white-link ">LOREM 2</a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="#LOREM3" class="nav-link color-white-link">LOREM 3</a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="#LOREM4" class="nav-link color-white-link">LOREM 4</a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="#LOREM5" class="nav-link color-white-link">LOREM 5</a>
+                                </li>
+                            </ul>
+    
+    
+                            <div class="dropdown text-end">
+                                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="image/Chien langue & non langue picto alt.png" alt="mdo" width="32" height="40"
+                                        class="rounded-circle">
+                                </a>
+                                <ul class="dropdown-menu text-small ovale-navigation">
+                                    <!-- <li><a class="dropdown-item" href="#navigation"></a></li> -->
+                                    <!-- <li><a class="dropdown-item" href="#carrousel"></a></li> -->
+                                    <li><a class="dropdown-item ovale-navigation" href="#LOREM1">LOREM 1</a></li>
+                                    <li><a class="dropdown-item" href="#LOREM2">LOREM 2</a></li>
+                                    <li><a class="dropdown-item" href="#LOREM3">LOREM 3</a></li>
+                                    <li><a class="dropdown-item" href="#LOREM4">LOREM 4</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#LOREM5">LOREM 5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+    
+        </nav>
+    </section>
 
 </header>
 
 <!-- Main page -->
-<main>
+<main class="container-fluid bg-site">
 
     <!-- Section #0 -->
 <section>
