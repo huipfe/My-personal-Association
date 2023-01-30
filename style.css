@@ -10,22 +10,10 @@ body {
     --color-Goldenrod: #db9501;
 }
 
-
-
-.bg-1 {
-    background-color: #1abc9c;
-    color: #ffffff;
-}
-
-.bg-2 {
-    background-color: #1abc9c;
-    color: #ffffff;
-}
-
-.bg-3 {
-    background-color: #1abc9c;
-    color: #ffffff;
-}
+/* .bg-site {
+        background-color: #db9501;
+            color: #ffffff;
+} */
 
 
 /* First Page */
@@ -34,12 +22,12 @@ body {
 /* Header */
 
 .bg-0 {
-    background-color: #C05805;
+    background-color: var(--color-Bronze);
     color: #ffffff;
 }
 
 ul.ovale-navigation {
-    background-color: #C05805;
+    background-color: var(--color-Bronze);
 }
 
 a.color-white-link {
@@ -65,24 +53,36 @@ width: 120px;
 
 /* Section 0 Présentation et histoire,
 de l'association */
-
+.bg-1 {
+    background-color: var(--color-Goldenrod);
+    color: #ffffff;
+}
 /* Article */
 
 
 
 /* Section 1 Résumer et objectif de l'association */
-
+.bg-1 {
+    background-color: var(--color-Goldenrod);
+    color: #ffffff;
+}
 /* Article */
 
 
 
 /* Section 2 Gallerie d'image */
-
+.bg-2 {
+    background-color: var(--color-SeaweedGreen);
+    color: #ffffff;
+}
 /* Article */
 
 
 /* Section 3 Contact */
-
+.bg-3 {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
 /* Bouton Primary Personnalisé */
 
 .btn-primary {
@@ -107,7 +107,7 @@ de l'association */
 
 
 .bg-4 {
-    background-color: #2e2300;
+    background-color: var(--color-Bark);
     color: #ffffff;
 }
 
