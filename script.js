@@ -23,9 +23,9 @@
 
 
 /** 4. Faire apparaitre disparaitre : 
- * L'image du chien burger, 
- * ou remplacer par un chien qui tire la langue,
- *  en fonction de si on clique ou pas dessus */
+ * L'image du chien de base, via display : none, dans la classe css
+ * ou remplacer par un chien qui tire la langue, donc remplacer l'url de l'image dans la classe css
+ * en fonction de si on clique ou pas dessus */
 
 function changeDog(nameSelecteur) {
     let selecteurBalisType = nameSelecteur.charAt(0);
@@ -56,41 +56,12 @@ function changeDog(nameSelecteur) {
     }
 }
 
-// function changeDog() {
-//     let element = document.getElementById('ChienChange');
-//     element.hidden = !element.hidden;
+
+// // 2ème méthode, sans pouvoir revenir en arrière
+// function changeDogButton1() {
+//     document.getElementById("ChienChange").src = "image/Chien langue & non langue picto.png";
 // }
 
-/** On peut appeler cette fonction, avec un sélecteur CSS
- * Comme un : .class ou un #identifiant
- * Pour l'appeler en #, un ID <button onclick = "changeDog"('#ChienChange')>
- * Pour l'appeler en ., une classe <a onclick = "changeDog"('.call-function-changeDog)>
- */ 
-// function changeDog(nameSelecteur) {
-//     let selecteurBaliseType = nameSelecteur.charAt(0); //doner la première valeur, position 0, de notre chaine de caractère
-//     let selecteurName = nameSelecteur.substring(1);
-//     if (selecteurBaliseType == '-') { // si cette valeur elle vaut un point, dans ce cas là...  
-//         // C'est une class, il faut que je puisse récuperer cet  élément
-//         let myElement = document.getElementsByClassName(selecteurName);
-//         Array.from(myElement).forEach(element => { //pour mes liens, pour chaque élément...
-
-//             if (element.classList.contains('button-click')) { // si dans mon élément, dans ma liste de classe, ma liste de classe contient hide
-//                 element.classList.remove('button-click'); //dans ce cas là, si ça le contient, on peut lui enlever
-//             }
-//             else { //Sinon, on lui ajoute
-//                 element.classList.add("button-click");
-//             }
-//         });
-//     }
-//     else if (selecteurBaliseType == '#') { // et si  c'est un dièse/htag....
-//         // alors c'est un identifiant
-//         let myElement = document.getElementById(selecteurName);
-//         if (myElement.classList.contains('button-click')) { // si dans mon élément, dans ma liste de classe, ma liste de classe contient hide
-//             myElement.classList.remove('button-click'); //dans ce cas là, si ça le contient, on peut lui enlever
-//         }
-//         else { //Sinon, on lui ajoute
-//             myElement.classList.add("button-click");
-//         }
-//     }
-
+// function changeDogButton2() {
+//     document.getElementById("ChienChange2").src = "image/Chien langue & non langue picto.png";
 // }
