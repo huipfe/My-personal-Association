@@ -160,9 +160,11 @@ a.color-white-link {
     /* font-size: 10px;  */
 }
 /* Animation Image via JS */
-.button-click{
-background-image: url('image/Chien langue & non langue picto.png');
-display: none;
+.button-click {
+/* content:'image/Chien langue & non langue picto.png' */
+/* background-image: url('image/Chien langue & non langue picto.png'); Image de remplacement */
+/* display: none; */
+/* Pour Teste */
 }
 
 /* .button-click:hover img{
