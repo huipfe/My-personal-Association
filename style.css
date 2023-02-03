@@ -249,11 +249,10 @@ de l'association */
     rafraichissant la page, uniquement besoin du scrollDown, en haut, et comme quand on 
     rafraichie la page, on arrive directement en haut.*/
     position: fixed;
-    bottom: 15px;
-    width: 150px;
+    bottom: 10px;
+    width: 100px;
     left: 50%;
     margin-left: -75px;
-
     background-color: #2c3049;
     box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
 }
@@ -264,11 +263,10 @@ de l'association */
     cursor: pointer;
     z-index: 1000;
     position: fixed;
-    bottom: 15px;
-    width: 150px;
+    bottom: 10px;
+    width: 100px;
     left: 50%;
     margin-left: -75px;
-
     background-color: #2c3049;
     box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
 }
