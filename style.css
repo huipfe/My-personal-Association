@@ -162,9 +162,13 @@ a.color-white-link {
 /* Animation Image via JS */
 .button-click {
 /* content:'image/Chien langue & non langue picto.png' */
-/* background-image: url('image/Chien langue & non langue picto.png'); Image de remplacement */
-/* display: none; */
+
+background-image: url('image/Chien langue & non langue picto.png'); 
+/* Image de remplacement */
+
+display: none;
 /* Pour Teste */
+
 }
 
 /* .button-click:hover img{
@@ -237,17 +241,37 @@ de l'association */
     color: #ffffff;
 }
 
+/* scrolltop */
+.btn-scrolltop {
+    cursor: pointer;
+    z-index: 999;
+    /*Z index inférieur en scrollDown, à 1000, pour ne pas se cumuler, parfois en 
+    rafraichissant la page, uniquement besoin du scrollDown, en haut, et comme quand on 
+    rafraichie la page, on arrive directement en haut.*/
+    position: fixed;
+    bottom: 15px;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
 
+    background-color: #2c3049;
+    box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
+}
 
-/* 2e Pages */
+/* ScrollDown */
 
+.btn-scrollDown {
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    bottom: 15px;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
 
-
-
-
-
-
-
+    background-color: #2c3049;
+    box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
+}
 
 /* Scrollbar personnalisé */
 ::-webkit-scrollbar {
