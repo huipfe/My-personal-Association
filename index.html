@@ -36,7 +36,7 @@
                 <!-- Bouton, quand la barre s'effondre (disparrait) après un point de rupture (lg ici)-->
                 <!-- cliquer dessus pour faire réparaitre les éléments de la barre de navig quand on est en lg-->
                 <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" onclick="changeDog('#ChienChange')">
+                    arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" data-clickdog onclick="changeDog('#ChienChange')">
                     <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
             <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42" height="42" 
             class="me-1" alt="Chien langue & non langue picto" id="ChienChange"></a>
@@ -438,18 +438,19 @@
 </main>   
 
     <!-- Footer -->
+    <section id="footer">
 <div class="container-fluid bg-4 text-center fw-normal md-0">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
         <div class="col-md-6 d-flex align-items-center">
-            <a href="#navigation"> <!--Vers le haut de page -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40" fill="white"
+            <!-- <a href="#navigation"> Vers le haut de page -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40" fill="white"
                     class="bi bi-arrow-bar-up fleche-navigation" viewBox="0 0 16 16">
 
                     <path fill-rule="evenodd"
                         d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z" />
                 </svg>
 
-            </a>
+            </a> -->
             <!--Vers le haut de page -->
             <ul class="float-end">
                 <span class="mb-3 mb-md-0">© 2023 Ilan Tervil, Tous droit réservé.</span>
@@ -532,7 +533,21 @@
 
     </footer>
 </div>
+</section>
 
+<!-- Bouton ScrollTop -->
+<button>
+    <a href="#navigation" class="btn-scrolltop btn text-danger rounded-pill dark" id="scrollTop">
+        Haut de page <i class="bi bi-chevron-up"></i>
+    </a>
+</button>
+
+<!--Bouton ScrollDown -->
+<button>
+    <a href="#footer" class="btn-scrollDown btn text-danger rounded-pill dark" id="scrollDown">
+        Bas de page <i class="bi bi-chevron-up"></i>
+    </a>
+</button>
 
     <!-- Local Javascript -->
     <script src="script.js"></script>
