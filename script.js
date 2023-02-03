@@ -48,49 +48,46 @@ document.addEventListener("scroll", (event) => {
 });
 
 
+/** 3. success/warning Mode : 
+ * changement de thème dans la page, thème Autonme ou Printemps */
+//warning = Chaud, thème Autonme/dark
+//success = froid, thème Printemps/light
 
-
-
-/** 3. Light/Dark Mode : 
- * changement de thème dans la page, thème bleue ou vert */
-
-//Thème Clair & Sombre, via paramètre
-
-/* Partie Clair, car site sombre de base */
+/* Partie printemps, car site avec thème d'automne de base */
 document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
     div.addEventListener("click", event => { /* Quand tu cliques sur ma div*/
         let themeTarget = event.currentTarget.dataset.theme;
-        if (themeTarget == "light") {  /*Si ThemeTarget = light*/
-            document.querySelectorAll(".bg-dark").forEach(darkElement => {
-                darkElement.classList.remove("bg-dark");
-                darkElement.classList.add("bg-light");
+        if (themeTarget == "success") {  /*Si ThemeTarget = success*/
+            document.querySelectorAll(".bg-warning").forEach(warningElement => {
+                warningElement.classList.remove("bg-warning");
+                warningElement.classList.add("bg-success");
             });
-            //récupère tout les élements qui ont la classe bg-dark
-            //bg-dark -> bg-light
-            //pour chaque élement dark element, on enlève, pour remplacer par light element.
-            /* Dans ce cas là, on applique le thème light */
+            //récupère tout les élements qui ont la classe bg-warning
+            //bg-warning -> bg-success
+            //pour chaque élement dark element, on enlève, pour remplacer par success element.
+            /* Dans ce cas là, on applique le thème success */
 
             //faire la même chose, mais pour le texte
-            document.querySelectorAll(".text-light").forEach(darkElement => {
-                darkElement.classList.remove("text-light");
-                darkElement.classList.add("text-dark");
+            document.querySelectorAll(".text-success").forEach(warningElement => {
+                warningElement.classList.remove("text-success");
+                warningElement.classList.add("text-warning");
             });
 
-            document.querySelectorAll(".text-bg-dark").forEach(lightElement => {
-                lightElement.classList.remove("text-bg-dark");
-                lightElement.classList.add("text-bg-light");
+            document.querySelectorAll(".text-bg-warning").forEach(successElement => {
+                successElement.classList.remove("text-bg-warning");
+                successElement.classList.add("text-bg-success");
             });
 
             //faire la même chose, pour la navbar
-            document.querySelectorAll(".navbar-dark").forEach(darkElement => {
-                darkElement.classList.remove("navbar-dark");
-                darkElement.classList.add("navbar-light");
+            document.querySelectorAll(".navbar-warning").forEach(warningElement => {
+                warningElement.classList.remove("navbar-warning");
+                warningElement.classList.add("navbar-success");
             });
 
             //faire la même chose, pour le bouton
-            document.querySelectorAll(".btn-dark").forEach(darkElement => {
-                darkElement.classList.remove("btn-dark");
-                darkElement.classList.add("btn-light");
+            document.querySelectorAll(".btn-warning").forEach(warningElement => {
+                warningElement.classList.remove("btn-warning");
+                warningElement.classList.add("btn-success");
             });
 
             //faire la même chose, pour le corp des cards (card-body)
