@@ -41,7 +41,12 @@
             <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42" height="42" 
             class="me-1" alt="Chien langue & non langue picto" id="ChienChange"></a>
                 </button>
-    
+
+                <!-- Modal Button -->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#settingsModal">
+                        <img src="image/" width="72" height="auto">
+                </button>
+
 <header class="collapse navbar-collapse p-3 mb-3" id="navbarNavDropdown">
 
     <div class="container">
@@ -66,7 +71,8 @@
                                     <a href="#contact" class="nav-link color-white-link">Nous contacter</a>
                                 </li>
                             </ul>
-    
+
+
     
                             <div class="dropdown text-end">
                                 <a href="#" class="d-block link-light text-decoration-none dropdown-toggle"
@@ -538,16 +544,41 @@
 <!-- Bouton ScrollTop -->
 <button>
     <a href="#navigation" class="btn btn-scrolltop" id="scrollTop">
-        <img src="image/Chien langue Scroll Down.png" width="72" height="auto">
+        <img src="image/Chien langue Scroll Down.png" width="50" height="auto">
     </a>
 </button>
 
 <!--Bouton ScrollDown -->
 <button>
     <a href="#footer" class="btn btn-scrollDown" id="scrollDown">
-        <img src="image/Chien langue Scroll Top.png" width="72" height="auto">
+        <img src="image/Chien langue Scroll Top.png" width="50" height="auto">
     </a>
 </button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="settingsModalLabel">Réglages</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-cols-2 justify-content-center">
+                    <div class="ChangeThemeDiv" data-theme="light">
+                        <img src="image/light.svg">
+                        Clair
+                    </div>
+                    <div class="ChangeThemeDiv" data-theme="dark">
+                        <img src="image/dark.svg">
+                        Sombre
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Local Javascript -->
     <script src="script.js"></script>
