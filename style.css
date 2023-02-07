@@ -121,25 +121,29 @@
     --bs-breakpoint-xxl: 1400px;
 
     /* Autumn Part - Warm Naturals*/
-    /* Bark */
+    /* Bark bg-4*/
     --color-Bark: #2e2300;
-    /* Seaweed Green */
+    /* Seaweed Green bg-2*/
     --color-SeaweedGreen: #6e6702;
-    /* Bronze */
+    /* Bronze bg-0*/
     --color-Bronze: #C05805;
-    /* Goldenrod */
+    /* Goldenrod bg-1*/
     --color-Goldenrod: #db9501;
+    /* bg-modal-1*/
+    --color-modal: #917741;
 
 
     /* Spring Part - Outdoorsy & Natural*/
-    /* Forest Green */
+    /* Forest Green bg-4-alt*/
     --Forest-Green: #2e4600;
-    /* Grass */
+    /* Grass bg-2-alt*/
     --Grass: #486b00;
-    /* Lime */
+    /* Lime bg-0-alt*/
     --Lime: #a2c523;
-    /* Earth */
-    --Earth: #7d4427;
+    /* spring-green bg-1-alt*/
+    --Earth: #89da59;
+    /* bg-modal-1-alt*/
+    --color-modal-alt: #eecd85;
 
 }
 
@@ -147,24 +151,24 @@
 body {
 
     /* Autumn Part - Warm Naturals*/
-    /* Bark */
-    --color-Bark: #2e2300;
-    /* Seaweed Green */
-    --color-SeaweedGreen: #6e6702;
-    /* Bronze */
-    --color-Bronze: #C05805;
-    /* Goldenrod */
-    --color-Goldenrod: #db9501;
+        /* Bark bg-4*/
+        --color-Bark: #2e2300;
+        /* Seaweed Green bg-2*/
+        --color-SeaweedGreen: #6e6702;
+        /* Bronze bg-0*/
+        --color-Bronze: #C05805;
+        /* Goldenrod bg-1*/
+        --color-Goldenrod: #db9501;
 
     /*  Spring Part - Outdoorsy & Natural*/
-    /* Forest Green */
-    --Forest-Green:#2e4600;
-    /* Grass */
-    --Grass:#486b00;
-    /* Lime */
-    --Lime:#a2c523;
-    /* Earth */
-    --Earth:#7d4427;
+        /* Forest Green bg-4-alt*/
+        --Forest-Green: #2e4600;
+        /* Grass bg-2-alt*/
+        --Grass: #486b00;
+        /* Lime bg-0-alt*/
+        --Lime: #a2c523;
+        /* spring-green bg-1-alt*/
+        --Earth: #89da59
 }
 
 /* .bg-site {
@@ -180,6 +184,11 @@ body {
 
 .bg-0 {
     background-color: var(--color-Bronze);
+    color: #ffffff;
+}
+
+.bg-0-alt {
+    background-color: var(--Lime);
     color: #ffffff;
 }
 
@@ -219,6 +228,10 @@ de l'association */
     background-color: var(--color-Goldenrod);
     color: #ffffff;
 }
+.bg-1-alt {
+    background-color: var(--Earth);
+    color: #ffffff;
+}
 /* Article */
 
 
@@ -226,6 +239,10 @@ de l'association */
 /* Section 1 Résumer et objectif de l'association */
 .bg-1 {
     background-color: var(--color-Goldenrod);
+    color: #ffffff;
+}
+.bg-1-alt {
+    background-color: var(--Earth);
     color: #ffffff;
 }
 /* Article */
@@ -237,12 +254,18 @@ de l'association */
     background-color: var(--color-SeaweedGreen);
     color: #ffffff;
 }
+.bg-2-alt {
+    background-color: var(--Grass);
+    color: #ffffff;
+}
 /* Article */
 
 
 /* Section 3 Contact */
 .bg-3 {
-    background-color: #1abc9c;
+    color: #ffffff;
+}
+.bg-3-alt {
     color: #ffffff;
 }
 /* Bouton Primary Personnalisé */
@@ -274,11 +297,14 @@ de l'association */
     background-color: var(--color-Bark);
     color: #ffffff;
 }
-
+.bg-4-alt {
+    background-color: var(--Forest-Green);
+    color: #ffffff;
+}
 /* scrolltop */
 .btn-scrolltop {
     cursor: pointer;
-    z-index: 999;
+    z-index: 100;
     /*Z index inférieur en scrollDown, à 1000, pour ne pas se cumuler, parfois en 
     rafraichissant la page, uniquement besoin du scrollDown, en haut, et comme quand on 
     rafraichie la page, on arrive directement en haut.*/
@@ -303,6 +329,19 @@ de l'association */
     margin-left: -75px;
     background-color: #2c3049;
     box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
+}
+
+
+/* Modal (contain)*/
+
+.bg-modal-1 {
+    background-color: var(--color-modal);
+    color: #ffffff;
+}
+
+.bg-modal-1-alt {
+    background-color: var(--color-modal-alt);
+    color: #ffffff;
 }
 
 /* Scrollbar personnalisé */
