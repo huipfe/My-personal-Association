@@ -30,7 +30,7 @@
 
 
                 <a href="#presentation" class="d-flex align-items-center fs-4 text-white md-2">
-                    <img src="image/patte de chien picto2.png" width="100" height="100" class="me-3" alt="ILAN-TERVIL-LOGO">
+                    <img src="image/patte de chien picto2.png" width="100" height="100" class="me-3 picto-theme1" alt="Logo Petit chien du monde">
                 </a>
                 <!-- TITRE A REFAIRE EN IMAGE, introduire dans patte de chien picto2, le titre-->
                 <!-- <h1 class="badge navbar-brand md-6 fs-2"><p>Les Petits Chiens<br>du Monde</p></h1> -->
@@ -42,12 +42,12 @@
                     arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" data-clickdog onclick="changeDog('#ChienChange')">
                     <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
             <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42" height="42" 
-            class="me-1" alt="Chien langue & non langue picto" id="ChienChange"></a>
+            class="me-1 picto-theme2" alt="Chien langue & non langue picto" id="ChienChange">
                 </button>
 
                 <!-- Modal Button -->
 
-                <button type="button" class="btn btn-warning-text" data-bs-toggle="modal" data-bs-target="#settingsModal">
+                <button type="button" class="btn btn-warning-text picto-theme3" data-bs-toggle="modal" data-bs-target="#settingsModal">
                     <img src="image/Chien parametre.png" width="42" height="auto">
                 </button>
 
@@ -551,14 +551,14 @@
 
 <!-- Bouton ScrollTop -->
 
-    <a href="#navigation" class="btn btn-scrolltop" id="scrollTop">
+    <a href="#navigation" class="btn btn-scrolltop picto-theme5" id="scrollTop">
         <img src="image/Chien langue Scroll Down.png" width="50" height="auto">
     </a>
 
 
 <!--Bouton ScrollDown -->
 
-    <a href="#footer" class="btn btn-scrollDown" id="scrollDown">
+    <a href="#footer" class="btn btn-scrollDown picto-theme4" id="scrollDown">
         <img src="image/Chien langue Scroll Top.png" width="50" height="auto">
     </a>
 
@@ -569,20 +569,20 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-0">
-                <h1 class="modal-title fs-5 " id="settingsModalLabel">Réglages</h1>
+                <h1 class="modal-title fs-5 " id="settingsModalLabel">Réglages du thème Printemps/Automne</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-modal-1">
                 <div class="row row-cols-2 justify-content-center">
 
-                    <div class="ChangeThemeDiv block-spring" data-theme="spring">
-                        <img class="btn-spring" src="image/chien printemp.png" width="42" height="auto">
-                        Printemps de chien
+                    <div class="ChangeThemeDiv block-spring position-relative" data-theme="spring">
+                        <img class="btn-spring position-relative top-50 start-50 translate-middle" src="image/chien printemp.png" width="42" height="auto">
+                        <!-- Printemps de chien -->
                     </div>
 
-                    <div class="ChangeThemeDiv block-autumn" data-theme="autumn">
-                        <img class="btn-autumn" src="image/chien automne.png" width="42" height="auto">
-                        Chien d'autonme
+                    <div class="ChangeThemeDiv block-autumn position-relative" data-theme="autumn">
+                        <img class="btn-autumn position-relative top-50 start-50 translate-middle" src="image/chien automne.png" width="42" height="auto">
+                        <!-- Chien d'autonme -->
                     </div>
 
                 </div>

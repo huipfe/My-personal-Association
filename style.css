@@ -121,7 +121,7 @@
     --bs-breakpoint-xxl: 1400px;
 
     /* Autumn Part - Warm Naturals*/
-    /* Bark bg-4*/
+    /* Bark bg-4 & btn-scrolltop*/
     --color-Bark: #2e2300;
     /* Seaweed Green bg-2*/
     --color-SeaweedGreen: #6e6702;
@@ -134,7 +134,7 @@
 
 
     /* Spring Part - Outdoorsy & Natural*/
-    /* Forest Green bg-4-alt*/
+    /* Forest Green bg-4-alt & btn-scrollDown*/
     --Forest-Green: #2e4600;
     /* Grass bg-2-alt*/
     --Grass: #486b00;
@@ -151,7 +151,7 @@
 body {
 
     /* Autumn Part - Warm Naturals*/
-        /* Bark bg-4*/
+        /* Bark bg-4 & btn-scrolltop*/
         --color-Bark: #2e2300;
         /* Seaweed Green bg-2*/
         --color-SeaweedGreen: #6e6702;
@@ -161,14 +161,14 @@ body {
         --color-Goldenrod: #db9501;
 
     /*  Spring Part - Outdoorsy & Natural*/
-        /* Forest Green bg-4-alt*/
+        /* Forest Green bg-4-alt & btn-scrollDown*/
         --Forest-Green: #2e4600;
         /* Grass bg-2-alt*/
         --Grass: #486b00;
         /* Lime bg-0-alt*/
         --Lime: #a2c523;
         /* spring-green bg-1-alt*/
-        --Earth: #89da59
+        --Earth: #89da59;
 }
 
 /* .bg-site {
@@ -313,8 +313,8 @@ de l'association */
     width: 100px;
     left: 50%;
     margin-left: -75px;
-    background-color: #2c3049;
-    box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
+    background-color: var(--color-Bark);
+    box-shadow: 0.25rem 0.25rem 2rem var(--color-Bark);
 }
 
 /* ScrollDown */
@@ -327,8 +327,8 @@ de l'association */
     width: 100px;
     left: 50%;
     margin-left: -75px;
-    background-color: #2c3049;
-    box-shadow: 0.25rem 0.25rem 2rem rgba(87, 112, 255, .4);
+    background-color: var(--Forest-Green);
+    box-shadow: 0.25rem 0.25rem 2rem var(--Forest-Green);
 }
 
 
@@ -347,10 +347,10 @@ de l'association */
 .btn-spring {
     cursor: pointer;
 }
+
 .btn-autumn {
     cursor: pointer;
 }
-
 
 .block-spring {
 background-color: var(--color-modal);
