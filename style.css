@@ -344,6 +344,22 @@ de l'association */
     color: #ffffff;
 }
 
+.btn-spring {
+    cursor: pointer;
+}
+.btn-autumn {
+    cursor: pointer;
+}
+
+
+.block-spring {
+background-color: var(--color-modal);
+}
+
+.block-autumn {
+background-color: var(--color-modal-alt);
+}
+
 /* Scrollbar personnalisé */
 ::-webkit-scrollbar {
     width: 20px;
