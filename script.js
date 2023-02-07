@@ -50,17 +50,17 @@ document.addEventListener("scroll", (event) => {
 
 /** 3. success/warning Mode : 
  * changement de thème dans la page, thème Autonme ou Printemps */
-//warning = Chaud, thème Autonme/dark
-//success = froid, thème Printemps/light
+//autumn = Chaud, thème Autonme/dark/no alt/bg-0,1,2,3,4/warning
+//spring = froid, thème Printemps/light/alt/bg-0,1,2,3,4-alt/sucess
 
 /* Partie printemps, car site avec thème d'automne de base */
 document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
     div.addEventListener("click", event => { /* Quand tu cliques sur ma div*/
         let themeTarget = event.currentTarget.dataset.theme;
-        if (themeTarget == "success") {  /*Si ThemeTarget = success*/
-            document.querySelectorAll(".bg-warning").forEach(warningElement => {
-                warningElement.classList.remove("bg-warning");
-                warningElement.classList.add("bg-success");
+        if (themeTarget == "spring") {  /*Si ThemeTarget = success*/
+            document.querySelectorAll(".bg-0").forEach(warningElement => {
+                warningElement.classList.remove("bg-0");
+                warningElement.classList.add("bg-0-alt");
             });
             //récupère tout les élements qui ont la classe bg-warning
             //bg-warning -> bg-success
@@ -68,41 +68,55 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             /* Dans ce cas là, on applique le thème success */
 
             //faire la même chose, mais pour le texte
-            document.querySelectorAll(".text-success").forEach(warningElement => {
-                warningElement.classList.remove("text-success");
-                warningElement.classList.add("text-warning");
+            document.querySelectorAll(".text-bg-0-alt").forEach(warningElement => {
+                warningElement.classList.remove("text-bg-0-alt");
+                warningElement.classList.add("text-bg-0");
             });
 
-            document.querySelectorAll(".text-bg-warning").forEach(successElement => {
-                successElement.classList.remove("text-bg-warning");
-                successElement.classList.add("text-bg-success");
+            document.querySelectorAll(".text-bg-0").forEach(successElement => {
+                successElement.classList.remove("text-bg-0");
+                successElement.classList.add("text-bg-0-alt");
             });
 
-            //faire la même chose, pour la navbar
-            document.querySelectorAll(".navbar-warning").forEach(warningElement => {
-                warningElement.classList.remove("navbar-warning");
-                warningElement.classList.add("navbar-success");
+            //faire la même chose, pour la navbar Header bg-0 
+            document.querySelectorAll(".navbar-bg-0").forEach(warningElement => {
+                warningElement.classList.remove("navbar-bg-0");
+                warningElement.classList.add("navbar-bg-0-alt");
             });
 
-            //faire la même chose, pour le bouton
-            document.querySelectorAll(".btn-warning").forEach(warningElement => {
-                warningElement.classList.remove("btn-warning");
-                warningElement.classList.add("btn-success");
+            //faire la même chose, pour le bouton, Section Contact 3 bg-3
+            document.querySelectorAll(".btn-bg-3").forEach(warningElement => {
+                warningElement.classList.remove("btn-bg-3");
+                warningElement.classList.add("btn-bg-3-alt");
             });
 
-            //faire la même chose, pour le corp des cards (card-body)
-            document.querySelectorAll(".dark").forEach(darkElement => {
-                darkElement.classList.remove("dark");
-                darkElement.classList.add("light");
+            //faire la même chose, pour la section 0 bg-1 Présentation et histoire,
+            //de l'association & section 1 bg-1 Résumer et objectif de l'association
+            document.querySelectorAll(".bg-1").forEach(darkElement => {
+                darkElement.classList.remove("bg-1");
+                darkElement.classList.add("bg-1-alt");
             });
 
-            // //avec un Regex, une expression régulière, pour simplifier
-            // document.querySelectorAll('[class^="*-dark"]').forEach(darkElement => {
+            //faire la même chose, pour la section 2 bg-2 Gallerie d'image
+            document.querySelectorAll(".bg-2").forEach(darkElement => {
+                darkElement.classList.remove("bg-2");
+                darkElement.classList.add("bg-2-alt");
+            });
 
-            // })
+            //faire la même chose, pour la footer 2 bg-4
+            document.querySelectorAll(".bg-4").forEach(darkElement => {
+                darkElement.classList.remove("bg-4");
+                darkElement.classList.add("bg-4-alt");
+            });
+
+            //faire la même chose, pour la modal bg-modal-1
+            document.querySelectorAll(".bg-modal-1").forEach(darkElement => {
+                darkElement.classList.remove("bg-modal-1");
+                darkElement.classList.add("bg-modal-1-alt");
+            });
         }
         /* Partie Sombre, car site devenu clair durant la partie précédente */
-        else if (themeTarget == "dark") {  /*Si ThemeTarget = dark*/
+        else if (themeTarget == "autumn") {  /*Si ThemeTarget = dark*/
             document.querySelectorAll(".bg-light").forEach(lightElement => {
                 lightElement.classList.remove("bg-light");
                 lightElement.classList.add("bg-dark");
@@ -123,13 +137,13 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 lightElement.classList.add("text-bg-dark");
             });
 
-            //faire la même chose, pour la navbar
+            //faire la même chose, pour la navbar 
             document.querySelectorAll(".navbar-light").forEach(lightElement => {
                 lightElement.classList.remove("navbar-light");
                 lightElement.classList.add("navbar-dark");
             });
 
-            //faire la même chose, pour le bouton
+            //faire la même chose, pour le bouton 
             document.querySelectorAll(".btn-light").forEach(lightElement => {
                 lightElement.classList.remove("btn-light");
                 lightElement.classList.add("btn-dark");
