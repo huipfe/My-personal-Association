@@ -119,6 +119,8 @@
     --bs-breakpoint-lg: 992px;
     --bs-breakpoint-xl: 1200px;
     --bs-breakpoint-xxl: 1400px;
+
+    /* Autumn Part - Warm Naturals*/
     /* Bark */
     --color-Bark: #2e2300;
     /* Seaweed Green */
@@ -127,11 +129,24 @@
     --color-Bronze: #C05805;
     /* Goldenrod */
     --color-Goldenrod: #db9501;
+
+
+    /* Spring Part - Outdoorsy & Natural*/
+    /* Forest Green */
+    --Forest-Green: #2e4600;
+    /* Grass */
+    --Grass: #486b00;
+    /* Lime */
+    --Lime: #a2c523;
+    /* Earth */
+    --Earth: #7d4427;
 
 }
 
 /* Global Color, use for entierly project */
 body {
+
+    /* Autumn Part - Warm Naturals*/
     /* Bark */
     --color-Bark: #2e2300;
     /* Seaweed Green */
@@ -140,6 +155,16 @@ body {
     --color-Bronze: #C05805;
     /* Goldenrod */
     --color-Goldenrod: #db9501;
+
+    /*  Spring Part - Outdoorsy & Natural*/
+    /* Forest Green */
+    --Forest-Green:#2e4600;
+    /* Grass */
+    --Grass:#486b00;
+    /* Lime */
+    --Lime:#a2c523;
+    /* Earth */
+    --Earth:#7d4427;
 }
 
 /* .bg-site {
