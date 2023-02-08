@@ -126,24 +126,29 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
 
 
             //faire la même chose, pour le picto spring button navbar theme2
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            document.querySelectorAll(".picto-theme2").forEach(imageSpring => {
+                imageSpring.src = "image/Chienlangue&nonlanguepicto alt spring.png";
+            });
 
             //faire la même chose, pour le picto spring button parametre theme3
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            document.querySelectorAll(".picto-theme3").forEach(imageSpring => {
+                imageSpring.src = "image/Chien parametre alt spring.png";
+            });
 
             //faire la même chose, pour le picto spring button scrolltop theme5
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            document.querySelectorAll(".picto-theme5").forEach(imageSpring => {
+                imageSpring.src = "image/Chien langue & non langue picto alt spring.png";
+            });
 
             //faire la même chose, pour le picto spring button scrollDown theme4
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            document.querySelectorAll(".picto-theme4").forEach(imageSpring => {
+                imageSpring.src = "image/Chien langue & non langue picto alt spring scrolldown.png";
+            });
+
+            //faire la même chose, pour le picto spring button bouton contact envoyé theme6
+            document.querySelectorAll(".picto-theme6").forEach(imageSpring => {
+                imageSpring.src = "image/Chienlangue&nonlanguepicto alt spring.png";
+            });
         }
 
         //autumn = Chaud, thème Autonme/dark/no alt/bg-0,1,2,3,4/warning
@@ -216,25 +221,30 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             // const imageSpring = document.querySelector(".picto-theme1");
             // imageSpring.src = "image/patte de chien picto2.png";
 
-            //faire la même chose, pour le picto spring button navbar theme2
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            //faire la même chose, pour le picto autumn button navbar theme2
+            document.querySelectorAll(".picto-theme2").forEach(imageSpring => {
+                imageSpring.src = "image/Chienlangue&nonlanguepictoalt.png";
+            });
 
-            //faire la même chose, pour le picto spring button parametre theme3
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            //faire la même chose, pour le picto autumn button parametre theme3
+            document.querySelectorAll(".picto-theme3").forEach(imageSpring => {
+                imageSpring.src = "image/Chien parametre.png";
+            });
 
-            //faire la même chose, pour le picto spring button scrolltop theme5
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            //faire la même chose, pour le picto autumn button scrolltop theme5
+            document.querySelectorAll(".picto-theme5").forEach(imageSpring => {
+                imageSpring.src = "image/Chien langue Scroll Top.png";
+            });
 
-            //faire la même chose, pour le picto spring button scrollDown theme4
-            // document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
-            //     imageSpring.src = "image/patte de chien picto alt spring.png";
-            // });
+            //faire la même chose, pour le picto autumn button scrollDown theme4
+            document.querySelectorAll(".picto-theme4").forEach(imageSpring => {
+                imageSpring.src = "image/Chien langue Scroll Down.png";
+            });
+
+            //faire la même chose, pour le picto autumn button bouton contact envoyé theme6
+            document.querySelectorAll(".picto-theme6").forEach(imageSpring => {
+                imageSpring.src = "image/Chienlangue&nonlanguepictoalt.png";
+            });
         }
 
     });
