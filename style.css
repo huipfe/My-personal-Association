@@ -354,10 +354,19 @@ de l'association */
 
 .block-spring {
 background-color: var(--color-modal);
+/* width: 1rem;
+height: auto;
+max-width: 10px; */
+margin: 5px;
+margin-top: 10px;
+margin-bottom: 20px;
 }
 
 .block-autumn {
 background-color: var(--color-modal-alt);
+margin: 5px;
+margin-top: 10px;
+margin-bottom: 20px;
 }
 
 /* Scrollbar personnalisé */
