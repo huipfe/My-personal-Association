@@ -1,11 +1,5 @@
 /** 1. Animation JS TypesWritter */
-
-
-
-
-
-
-
+//Pas besoin
 
 /** 2. ScrollTop/Down Function :
  * remonter, ou descendre dans la page */
@@ -17,18 +11,20 @@ document.addEventListener("scroll", (event) => {
     let btnScrollTop = document.getElementById("scrollTop")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        // btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        // btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
-
 //d-none est une classe en bootstrap qui veut dire display-none, pour afficher ou ne pas afficher.
+
 
 //ScrollDown
 
@@ -36,13 +32,15 @@ document.addEventListener("scroll", (event) => {
     let btnScrollTop = document.getElementById("scrollDown")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        //btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        //btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
@@ -114,6 +112,24 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             document.querySelectorAll(".bg-modal-1").forEach(autumnElement => {
                 autumnElement.classList.remove("bg-modal-1");
                 autumnElement.classList.add("bg-modal-1-alt");
+            });
+
+            //faire la même chose, pour ul.ovale-navigation
+            document.querySelectorAll(".ovale-navigation").forEach(autumnElement => {
+                autumnElement.classList.remove("ovale-navigation");
+                autumnElement.classList.add("ovale-navigation-alt");
+            });
+
+            //faire la même chose, pour la scrollbar-track
+            document.querySelectorAll(".scrollbar-track").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-track");
+                autumnElement.classList.add("scrollbar-track-alt");
+            });
+
+            //faire la même chose, pour la scrollbar-thumb
+            document.querySelectorAll(".scrollbar-thumb").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-thumb");
+                autumnElement.classList.add("scrollbar-thumb-alt");
             });
 
             //faire la même chose, pour le picto spring Logo theme1
@@ -213,6 +229,12 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 autumnElement.classList.add("bg-modal-1");
             });
 
+            //faire la même chose, pour ul.ovale-navigation-alt
+            document.querySelectorAll(".ovale-navigation-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("ovale-navigation-alt");
+                autumnElement.classList.add("ovale-navigation");
+            });
+
             //faire la même chose, pour le picto autumn Logo theme1
             document.querySelectorAll(".picto-theme1").forEach(imageSpring => {
                 imageSpring.src = "image/patte de chien picto2.png";
@@ -256,92 +278,61 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
  * ou remplacer par un chien qui tire la langue, donc remplacer l'url de l'image dans la classe css 
  * en fonction de si on clique ou pas dessus */
 
+function changeDog(){
+    let imageTireLangueAutonme = document.body.style.backgroundImage = "url('image/Chien langue Scroll Top.png')"
+    let imageTireLanguePrintemps = document.body.style.backgroundImage = "url('image/Chien langue & non langue picto alt spring')"
+    //Partie Chien Automne
+    if () {
+        //Si je clique, via une classe prédéfini, alors mon button prend l'image de mon chien autonme qui tire la langue.
+    }
+    else {
+        //Sinon, si je reclick dessus, mon image initial du chien qui ne tire pas la langue revient.
+    }
 
-let btns = document.getElementsByClassName("call-function-changeDog");
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        document.getElementById(".ChienNavbar1").classList.toggle("active");
-    });
-}
+}   //Chien Printemps
+    else if () {
+        //Et si, j'avais le mode printemps activé, 
+    }
+    if () {
+        //alors mon chien vert, devient le chien vert tirant sa langue
+    }
+    else {
+        //Et si je reclick, mon chien redevient, celui en vert, qui ne tire pas la langue
+    }
 
-// document.querySelectorAll(".call-function-changeDog").forEach(div => {
-//     div.addEventListener("click", event => { bouton*/
-//         let changeDog = event.currentTarget.dataset.theme;
-//         if (changeDog == "spring") {  
-//             document.querySelectorAll(".call-function-changeDog").forEach(autumnDog => {
-//                 autumnDog.classList.remove("bg-0");
-//                 autumnDog.classList.add("bg-0-alt");
-//             });
+
+
+
+//** Faire dispaitre, avec une classe css, display none */
+// function changeDog(nameSelecteur) {
+//     let selecteurBalisType = nameSelecteur.charAt(0);
+//     let selecteurName = nameSelecteur.substring(1);
+//     if (selecteurBalisType == '.') {
+//         //c'est une classe
+//         let myElements = document.getElementsByClassName(selecteurName);
+//         Array.from(myElements).forEach(element => {
+
+//             if (element.classList.contains('button-click')) {
+//                 element.classList.remove('button-click');
+//             }
+//             else {
+//                 element.classList.add("button-click");
+//             }
+//         });
+
+//     }
+//     else if (selecteurBalisType == '#') {
+//         //c'est un identifiant
+//         let myElement = document.getElementById(selecteurName);
+//         if (myElement.classList.contains('button-click')) {
+//             myElement.classList.remove('button-click');
 //         }
-//         else if (changeDog == "autumn") { 
-//             document.querySelectorAll(".call-function-changeDog").forEach(springDog => {
-//                 springDog.classList.remove("bg-0-alt");
-//                 springDog.classList.add("bg-0");
-//             })
+//         else {
+//             myElement.classList.add("button-click");
 //         }
-
-//     });
-// });
-
-// document.getElementById('drk').addEventListener("click", function () {
-//     document.body.classList.toggle("light-mode");
-// });
-
-// function changeDog() {
-//     let element = document.body;
-//     element.classList.toggle("call-function-changeDog");
-//     let myDogLangue = document.querySelectorAll('drk');
-//     if (myDogLangue.style.backgroundImage === "url('image/Chienlangue&nonlanguepictoalt.png')") {
-//         onlick(myDogLangue.style.backgroundImage = "url('image/Chien langue Scroll Top.png')");
-//     } else {
-//         myDogLangue.style.backgroundImage = "url('image/Chienlangue&nonlanguepictoalt.png')";
 //     }
 // }
 
-// function changeDog() {
-//     document.querySelectorAll(".call-function-changeDog").style.backgroundImage = "url('image/Chien langue Scroll Top.png')";
-// }
-
-
-    // function changeDog() {
-
-        //Partie Chien Automne
-
-            // let imageTireLangueAutonme = document.body.style.backgroundImage = "url('image/Chien langue Scroll Top.png')";
-
-            //Si je clique, via une classe prédéfini, alors mon button prend l'image de mon chien autonme qui tire la langue.
-
-            // document.querySelectorAll('.call-function-changeDog').style.backgroundImage = imageTireLangueAutonme; 
-
-            //Sinon, si je reclick dessus, mon image initial du chien qui ne tire pas la langue revient.
-
-        //Chien Printemps
-            //Et si, j'avais le mode printemps activé, 
-
-            // let imageTireLanguePrintemps = document.body.style.backgroundImage = "url('image/Chien langue & non langue picto alt spring')";
-
-            //alors mon chien vert, devient le chien vert tirant sa langue
-
-            // document.querySelectorAll('.call-function-changeDog').style.    backgroundImage = imageTireLanguePrintemps; 
-
-
-            //Et si je reclick, mon chien redevient, celui en vert, qui ne     tire     pas     la langue
-    // }
-
-// let imageTireLangueAutonme = document.querySelectorAll(".call-function-changeDog")
-
-
-// mesInputsWysiwygEvents.forEach(mesImages => {
-
-//     mesImages.addEventListener("click", changeDog);
-//     mesImages.addEventListener("click", changeDog);
-// });
-
-
-// // 2ème méthode, sans pouvoir revenir en arrière
-// function changeDogButton1() {
-//     document.getElementById("ChienChange").src = "image/Chien langue & non langue picto.png";
-// }
 
 //** teste */
 // array.forEach(element => {
