@@ -220,6 +220,15 @@ height: 70px;
 width: 120px;
 }  */
 
+div .call-function-changeDog {
+    background-image: url("image/Chienlangue&nonlanguepictoalt.png");
+}
+
+div .call-function-changeDog.active {
+    background-image: url("image/Chien langue Scroll Top.png");
+}
+
+
 /* Main */
 
 /* Section 0 Présentation et histoire,
