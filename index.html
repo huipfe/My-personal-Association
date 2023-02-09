@@ -38,11 +38,11 @@
 
                 <!-- Bouton, quand la barre s'effondre (disparrait) après un point de rupture (lg ici)-->
                 <!-- cliquer dessus pour faire réparaitre les éléments de la barre de navig quand on est en lg-->
-                <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                <button data-for="ChienNavbar1" type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                     arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" data-clickdog onclick="changeDog()">
                     <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
             <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42" height="42" 
-            class="me-1 picto-theme2 call-function-changeDog" alt="Chien langue & non langue picto" id="">
+            class="me-1 picto-theme2 call-function-changeDog" alt="Chien langue & non langue picto" id="ChienNavbar1">
                 </button>
 
                 <!-- Modal Button -->
@@ -85,8 +85,8 @@
                             <div class="dropdown text-end">
                                 <a href="#" class="d-block link-light text-decoration-none dropdown-toggle"
                                     data-bs-toggle="dropdown" aria-expanded="false"  onclick="changeDog()">
-                                    <img src="image/Chienlangue&nonlanguepictoalt.png" alt="mdo" width="32" height="32"
-                                        class="rounded-circle call-function-changeDog picto-theme2" id="">
+                                    <img data-for="ChienNavbar2" src="image/Chienlangue&nonlanguepictoalt.png" alt="mdo" width="32" height="32"
+                                        class="rounded-circle call-function-changeDog picto-theme2" id="ChienNavbar2">
                                 </a>
                                 <ul class="dropdown-menu text-small ovale-navigation">
                                     <!-- <li><a class="dropdown-item" href="#navigation"></a></li> -->
@@ -568,7 +568,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-0">
-                <h1 class="modal-title fs-5 " id="settingsModalLabel">Réglages du thème Printemps/Automne</h1>
+                <h1 class="modal-title fs-5 " id="settingsModalLabel">Réglages du thème : <span>Printemps</span>/<span>Automne</span> </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-modal-1">
