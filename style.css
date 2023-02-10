@@ -207,31 +207,7 @@ a.color-white-link {
     /* font-size: 10px;  */
 }
 
-/* Animation Image via JS */
-/* .button-click { */
-/* content:'image/Chien langue & non langue picto.png' */
 
-/* background-image: url('image/Chien langue Scroll Top.png');  */
-/* Image de remplacement */
-
-/* display: none; */
-/* Pour Teste */
-
-/* } */
-
-/* .button-click:hover img{
-background-image: url('image/Chien langue & non langue picto.png');
-height: 70px;
-width: 120px;
-}  */
-
-div .call-function-changeDog {
-    background-image: url("image/Chienlangue&nonlanguepictoalt.png");
-}
-
-div .call-function-changeDog.active {
-    background-image: url("image/Chien langue Scroll Top.png");
-}
 
 
 /* Main */
