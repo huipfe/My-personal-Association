@@ -274,47 +274,29 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
 
 
 /** 4. Faire apparaitre disparaitre : 
- * L'image du chien de base, via display : none, dans la classe css
- * ou remplacer par un chien qui tire la langue, donc remplacer l'url de l'image dans la classe css 
+ * L'image du chien de base : 
+ * remplacer par un chien qui tire la langue,
  * en fonction de si on clique ou pas dessus */
 
-//** first dog picto */
-//Select image element
-const img = document.getElementById('changeDog1');
-//Listen for the click event
-//toggle variable
-let toggle = true;
-
-img.addEventListener('click', function () {
-    //toggle
-    toggle = !toggle;
-    if(toggle){
-        img.src = 'image/Chienlangue&nonlanguepictoalt.png';
+//NavBar Button 1
+function changeDog1() {
+    var image = document.getElementById('changeDog1');
+    if (image.src.match("Scroll")) {
+        image.src = "image/Chienlangue&nonlanguepictoalt.png";
     }
     else {
-        img.src = 'image/Chien langue Scroll Top.png';
+        image.src = "image/Chien langue Scroll Top.png";
     }
+}
 
-    // img.src = 'image/Chien langue Scroll Top.png';
-})
-
-
-//** 2nd dog picto */
-//Select image element
-const img2 = document.getElementById('changeDog2');
-//Listen for the click event
-//toggle variable
-let toggle2 = true;
-
-img2.addEventListener('click', function () {
-    //toggle
-    toggle2 = !toggle2;
-    if (toggle2) {
-        img2.src = 'image/Chienlangue&nonlanguepictoalt.png';
+//NavBar Button 2 
+function changeDog2() {
+    var image = document.getElementById('changeDog2');
+    if (image.src.match("Scroll")) {
+        image.src = "image/Chienlangue&nonlanguepictoalt.png";
     }
     else {
-        img2.src = 'image/Chien langue Scroll Top.png';
+        image.src = "image/Chien langue Scroll Top.png";
     }
+}
 
-    // img.src = 'image/Chien langue Scroll Top.png';
-})
