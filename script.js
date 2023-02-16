@@ -83,10 +83,10 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 autumnElement.classList.add("navbar-bg-0-alt");
             });
 
-            //faire la même chose, pour le bouton, Section Contact 3 bg-3
-            document.querySelectorAll(".btn-bg-3").forEach(autumnElement => {
-                autumnElement.classList.remove("btn-bg-3");
-                autumnElement.classList.add("btn-bg-3-alt");
+            //faire la même chose, pour le bouton, Section Contact 3 btn-doggy
+            document.querySelectorAll(".btn-doggy").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-doggy");
+                autumnElement.classList.add("btn-doggy-alt");
             });
 
             //faire la même chose, pour la section 0 bg-1 Présentation et histoire,
@@ -198,10 +198,10 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 warningElement.classList.add("navbar-bg-0");
             });
 
-            //faire la même chose, pour le bouton, Section Contact 3 bg-3-alt
-            document.querySelectorAll(".btn-bg-3-alt").forEach(autumnElement => {
-                autumnElement.classList.remove("btn-bg-3-alt");
-                autumnElement.classList.add("btn-bg-3");
+            //faire la même chose, pour le bouton, Section Contact 3 btn-doggy-alt
+            document.querySelectorAll(".btn-doggy-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-doggy-alt");
+                autumnElement.classList.add("btn-doggy");
             });
 
             //faire la même chose, pour la section 0 bg-1-alt Présentation et histoire,
