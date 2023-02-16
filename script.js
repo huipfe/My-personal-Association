@@ -55,7 +55,7 @@ document.addEventListener("scroll", (event) => {
 document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
     div.addEventListener("click", event => { /* Quand tu cliques sur ma div*/
         let themeTarget = event.currentTarget.dataset.theme;
-        if (themeTarget == "spring") {  /*Si ThemeTarget = spring*/
+        if (themeTarget == "spring") {  /*Si ThemeTarget = success*/
             document.querySelectorAll(".bg-0").forEach(autumnElement => {
                 autumnElement.classList.remove("bg-0");
                 autumnElement.classList.add("bg-0-alt");
@@ -171,7 +171,7 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
         //spring = froid, thème Printemps/light/alt/bg-0,1,2,3,4-alt/sucess
 
         /* Partie automne, car site devenu printemps durant la partie précédente */
-        else if (themeTarget == "autumn") {  /*Si ThemeTarget = autumn*/
+        else if (themeTarget == "autumn") {  /*Si ThemeTarget = dark*/
             document.querySelectorAll(".bg-0-alt").forEach(springElement => {
                 springElement.classList.remove("bg-0-alt");
                 springElement.classList.add("bg-0");
