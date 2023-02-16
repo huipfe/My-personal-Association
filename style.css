@@ -1,5 +1,5 @@
 :root,
-[data-bs-theme=light] {
+[data-theme="autumn"] {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -196,34 +196,21 @@ ul.ovale-navigation {
     background-color: var(--color-Bronze);
 }
 
+ul.ovale-navigation-alt {
+    background-color: var(--Lime);
+}
+
 a.color-white-link {
     color: #ffffff;
     padding: 15px;
     margin: 10px;
     /* font-size: 10px;  */
 }
-/* Animation Image via JS */
-.button-click {
-/* content:'image/Chien langue & non langue picto.png' */
-
-background-image: url('image/Chien langue & non langue picto.png'); 
-/* Image de remplacement */
-
-display: none;
-/* Pour Teste */
-
-}
-
-/* .button-click:hover img{
-background-image: url('image/Chien langue & non langue picto.png');
-height: 70px;
-width: 120px;
-}  */
 
 /* Main */
-
 /* Section 0 Présentation et histoire,
 de l'association */
+
 .bg-1 {
     background-color: var(--color-Goldenrod);
     color: #ffffff;
@@ -263,23 +250,40 @@ de l'association */
 
 /* Section 3 Contact */
 .bg-3 {
-    color: #ffffff;
+    color: #000000;
 }
 .bg-3-alt {
-    color: #ffffff;
+    color: #000000;
 }
 /* Bouton Primary Personnalisé */
 
-.btn-doggy {
+.btn-doggy-alt {
     --bs-btn-color: #6e6702;
     --bs-btn-bg: #6e6702;
     --bs-btn-border-color: none ;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--color-SeaweedGreen) ;
+    --bs-btn-hover-bg: var(--Grass) ;
+    --bs-btn-hover-border-color: var(--Grass);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--Grass);
+    --bs-btn-active-bg: var(--Lime) ;
+    --bs-btn-active-border-color: var(--Grass);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--Grass);
+    --bs-btn-disabled-border-color: var(--Grass);
+}
+
+.btn-doggy {
+    --bs-btn-color: #6e6702;
+    --bs-btn-bg: #6e6702;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--color-SeaweedGreen);
     --bs-btn-hover-border-color: var(--color-SeaweedGreen);
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: var(--color-SeaweedGreen);
-    --bs-btn-active-bg: var(--color-Bronze) ;
+    --bs-btn-active-bg: var(--color-Bronze);
     --bs-btn-active-border-color: var(--color-SeaweedGreen);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
@@ -287,11 +291,7 @@ de l'association */
     --bs-btn-disabled-border-color: var(--color-SeaweedGreen);
 }
 
-
-
 /* Footer */
-
-
 
 .bg-4 {
     background-color: var(--color-Bark);
@@ -301,6 +301,7 @@ de l'association */
     background-color: var(--Forest-Green);
     color: #ffffff;
 }
+
 /* scrolltop */
 .btn-scrolltop {
     cursor: pointer;
@@ -370,16 +371,25 @@ margin-bottom: 20px;
 }
 
 /* Scrollbar personnalisé */
+
+
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-SeaweedGreen);
+    background-color: var(--color-SeaweedGreen);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-Bronze);
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--color-Bronze);
+::-webkit-scrollbar-track-alt {
+    background: var(--Grass);
+}
+
+::-webkit-scrollbar-thumb-alt {
+    background: var(--Lime);
 }
 
 /*# sourceMappingURL=style.css.map */

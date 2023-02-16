@@ -38,11 +38,11 @@
 
                 <!-- Bouton, quand la barre s'effondre (disparrait) après un point de rupture (lg ici)-->
                 <!-- cliquer dessus pour faire réparaitre les éléments de la barre de navig quand on est en lg-->
-                <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" data-clickdog onclick="changeDog('#ChienChange')">
+                <button data-for="ChienNavbar1" type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    arial-controls="navbarNavDropdown" aria-expanded="false" aria-label="toggle navigation" data-clickdog onclick="changeDog1()" >
                     <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
             <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42" height="42" 
-            class="me-1 picto-theme2" alt="Chien langue & non langue picto" id="ChienChange">
+            class="me-1 picto-theme2 call-function-changeDog" alt="Chien langue & non langue picto" id="changeDog1">
                 </button>
 
                 <!-- Modal Button -->
@@ -60,7 +60,7 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-            <ul class="navbar-nav bg-0 col-12 col-md-8 me-lg-auto mb-6 justify-content-center mb-md-0">
+            <ul class="navbar-nav col-12 col-md-8 me-lg-auto mb-6 justify-content-center mb-md-0">
                                 <!-- <ul class="navbar-nav bg-0"> -->
                                 <li class="nav-item">
                                     <a href="#presentation" class="nav-link color-white-link">Présentation de l'association</a>
@@ -84,9 +84,9 @@
     
                             <div class="dropdown text-end">
                                 <a href="#" class="d-block link-light text-decoration-none dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-expanded="false"  onclick="changeDog('#ChienChange2')">
-                                    <img src="image/Chienlangue&nonlanguepictoalt.png" alt="mdo" width="32" height="32"
-                                        class="rounded-circle call-function-changeDog picto-theme2" id="ChienChange2">
+                                    data-bs-toggle="dropdown" aria-expanded="false"  onclick="changeDog2()">
+                                    <img data-for="ChienNavbar2" src="image/Chienlangue&nonlanguepictoalt.png" alt="mdo" width="32" height="32"
+                                        class="rounded-circle call-function-changeDog picto-theme2" id="changeDog2">
                                 </a>
                                 <ul class="dropdown-menu text-small ovale-navigation">
                                     <!-- <li><a class="dropdown-item" href="#navigation"></a></li> -->
@@ -169,7 +169,8 @@
     
     <div class="row">
 <div class="col col justify-content-start">
-        <div class="d-flex col-md-6 order-md-1">
+        <div class="d-flex col-md-8 col-lg-6
+        order-md-1">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                 preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -179,10 +180,10 @@
         </div>
     </div>
 </div>
-
+<br>
                 <div class="row">
             <div class="col justify-content-end">
-            <div class="d-flex col-md-6 col-lg-12 order-md-1">
+            <div class="d-flex col-md-8 col-lg-6 order-md-1">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
                         focusable="false">
@@ -208,8 +209,8 @@
         </div>
     </div>
 </div> -->
-    
-    <p class="lead col-12 col-md-8 col-lg-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente 
+    <div class="d-flex col-12 order-md-1">
+    <p class="lead text-start text-block ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente 
         numquam quam accusantium eius veniam vero dolor fuga beatae totam, consequuntur animi 
         voluptates! Atque quae cupiditate qui eius?<br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
@@ -218,7 +219,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
                         numquam quam accusantium eius veniam vero dolor fuga beatae totam, consequuntur animi
                         voluptates! Atque quae cupiditate qui eius?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
+                        </div>
+        <div class="d-flex col-12 order-md-1">
+        <p class="text-start text-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
             numquam quam accusantium eius veniam vero dolor fuga beatae totam, consequuntur animi
             voluptates! Atque quae cupiditate qui eius?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
@@ -227,6 +230,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem natus sapiente
             numquam quam accusantium eius veniam vero dolor fuga beatae totam, consequuntur animi
             voluptates! Atque quae cupiditate qui eius?</p>
+                                    </div>
     <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
 </div>
 </article>
@@ -239,7 +243,7 @@
 <div class="container-fluid bg-2 col-12 col-md-12 col-lg-12">
 
 <!-- Carousel -->
-<div id="carouselExampleCaptions" class="carousel slide col-12 col-md-8 col-lg-6">
+<div id="carouselExampleCaptions" class="carousel slide col-12 col-md-12 col-lg-12">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
@@ -396,10 +400,10 @@
     <!-- Section #3 Contact -->
     
     <section id="contact">
-        <div class="row g-5 container-fluid">
+        <fieldset class="row g-5 container-fluid bg-3">
     
             <div class="col-md-7 col-lg-8">
-                <h1 class="mb-3">Nous contacter</h1>
+                <h1><legend class="mb-3">Nous contacter</legend></h1>
                 <form class="needs-validation" novalidate="">
                     <div class="row g-3">
                         <div class="col-sm-6">
@@ -441,12 +445,12 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="my-6">
+                    <br>
                     <button class="w-6 py-8 btn btn-doggy  btn-md" type="submit"> 
-                        <img src="image/Chienlangue&nonlanguepictoalt.png" width="72" height="auto" class="picto-theme6">Envoyez</button>
+                        <img src="image/Chienlangue&nonlanguepictoalt.png" width="72" height="auto" class="picto-theme6"></button>
                 </form>
             </div>
-        </div>
+        </fieldset>
     </section>
 
 </main>   
@@ -552,17 +556,15 @@
 
 <!-- Bouton ScrollDown -->
 <a href="#footer" class="btn btn-scrollDown" id="scrollDown">
-    <img src="image/Chien langue Scroll Top.png" class="picto-theme5" width="50" height="auto">
+    <img src="image/Chien langue Scroll Top.png" class="picto-theme5" width="40" height="auto">
 </a>
 
 
 
 <!--Bouton ScrollTop -->
     <a href="#navigation" class="btn btn-scrolltop" id="scrollTops">
-        <img src="image/Chien langue Scroll Down.png" class="picto-theme4" width="50" height="auto">
+        <img src="image/Chien langue Scroll Down.png" class="picto-theme4" width="40" height="auto">
     </a>
-
-
 
 
 <!-- Modal (contain) -->
@@ -600,6 +602,7 @@
             crossorigin="anonymous"></script>
 
     <!-- Popper and Jquery Distant -->
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>

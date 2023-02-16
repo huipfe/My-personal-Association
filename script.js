@@ -1,11 +1,5 @@
 /** 1. Animation JS TypesWritter */
-
-
-
-
-
-
-
+//Pas besoin
 
 /** 2. ScrollTop/Down Function :
  * remonter, ou descendre dans la page */
@@ -17,18 +11,20 @@ document.addEventListener("scroll", (event) => {
     let btnScrollTop = document.getElementById("scrollTop")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        // btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        // btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
-
 //d-none est une classe en bootstrap qui veut dire display-none, pour afficher ou ne pas afficher.
+
 
 //ScrollDown
 
@@ -36,13 +32,15 @@ document.addEventListener("scroll", (event) => {
     let btnScrollTop = document.getElementById("scrollDown")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        //btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
-        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+
+        //btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
@@ -85,10 +83,10 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 autumnElement.classList.add("navbar-bg-0-alt");
             });
 
-            //faire la même chose, pour le bouton, Section Contact 3 bg-3
-            document.querySelectorAll(".btn-bg-3").forEach(autumnElement => {
-                autumnElement.classList.remove("btn-bg-3");
-                autumnElement.classList.add("btn-bg-3-alt");
+            //faire la même chose, pour le bouton, Section Contact 3 btn-doggy
+            document.querySelectorAll(".btn-doggy").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-doggy");
+                autumnElement.classList.add("btn-doggy-alt");
             });
 
             //faire la même chose, pour la section 0 bg-1 Présentation et histoire,
@@ -114,6 +112,24 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             document.querySelectorAll(".bg-modal-1").forEach(autumnElement => {
                 autumnElement.classList.remove("bg-modal-1");
                 autumnElement.classList.add("bg-modal-1-alt");
+            });
+
+            //faire la même chose, pour ul.ovale-navigation
+            document.querySelectorAll(".ovale-navigation").forEach(autumnElement => {
+                autumnElement.classList.remove("ovale-navigation");
+                autumnElement.classList.add("ovale-navigation-alt");
+            });
+
+            //faire la même chose, pour la scrollbar-track
+            document.querySelectorAll(".scrollbar-track").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-track");
+                autumnElement.classList.add("scrollbar-track-alt");
+            });
+
+            //faire la même chose, pour la scrollbar-thumb
+            document.querySelectorAll(".scrollbar-thumb").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-thumb");
+                autumnElement.classList.add("scrollbar-thumb-alt");
             });
 
             //faire la même chose, pour le picto spring Logo theme1
@@ -182,10 +198,10 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 warningElement.classList.add("navbar-bg-0");
             });
 
-            //faire la même chose, pour le bouton, Section Contact 3 bg-3-alt
-            document.querySelectorAll(".btn-bg-3-alt").forEach(autumnElement => {
-                autumnElement.classList.remove("btn-bg-3-alt");
-                autumnElement.classList.add("btn-bg-3");
+            //faire la même chose, pour le bouton, Section Contact 3 btn-doggy-alt
+            document.querySelectorAll(".btn-doggy-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-doggy-alt");
+                autumnElement.classList.add("btn-doggy");
             });
 
             //faire la même chose, pour la section 0 bg-1-alt Présentation et histoire,
@@ -211,6 +227,12 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             document.querySelectorAll(".bg-modal-1-alt").forEach(autumnElement => {
                 autumnElement.classList.remove("bg-modal-1-alt");
                 autumnElement.classList.add("bg-modal-1");
+            });
+
+            //faire la même chose, pour ul.ovale-navigation-alt
+            document.querySelectorAll(".ovale-navigation-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("ovale-navigation-alt");
+                autumnElement.classList.add("ovale-navigation");
             });
 
             //faire la même chose, pour le picto autumn Logo theme1
@@ -252,49 +274,122 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
 
 
 /** 4. Faire apparaitre disparaitre : 
- * L'image du chien de base, via display : none, dans la classe css
- * ou remplacer par un chien qui tire la langue, donc remplacer l'url de l'image dans la classe css 
+ * L'image du chien de base : 
+ * remplacer par un chien qui tire la langue,
  * en fonction de si on clique ou pas dessus */
 
+//Méthode via onclick, direct, via une fonction, sur le bouton, dans le html
 
-function changeDog(nameSelecteur) {
-    let selecteurBalisType = nameSelecteur.charAt(0);
-    let selecteurName = nameSelecteur.substring(1);
-    if (selecteurBalisType == '.') {
-        //c'est une classe
-        let myElements = document.getElementsByClassName(selecteurName);
-        Array.from(myElements).forEach(element => {
-
-            if (element.classList.contains('button-click')) {
-                element.classList.remove('button-click');
-            }
-            else {
-                element.classList.add("button-click");
-            }
-        });
-
+//NavBar Button 1
+function changeDog1() {
+    let image = document.getElementById('changeDog1');
+    if (image.src.match("Scroll")) {
+        image.src = "image/Chienlangue&nonlanguepictoalt.png";
     }
-    else if (selecteurBalisType == '#') {
-        //c'est un identifiant
-        let myElement = document.getElementById(selecteurName);
-        if (myElement.classList.contains('button-click')) {
-            myElement.classList.remove('button-click');
-        }
-        else {
-            myElement.classList.add("button-click");
-        }
+    else {
+        image.src = "image/Chien langue Scroll Top.png";
+    }
+
+    // Si on est en mode printemps
+    // let imageSpring = document.getElementById('changeDog1');
+    // if (image.src.match("spring")) {
+    //     imageSpring.src = "image/Chienlangue&nonlanguepicto alt spring.png";
+
+    // }
+    // else {
+    //     imageSpring.src = "image/Chien langue & non langue picto alt spring.png";
+
+    // }
+}
+
+//NavBar Button 2 
+function changeDog2() {
+    let image = document.getElementById('changeDog2');
+    if (image.src.match("Scroll")) {
+        image.src = "image/Chienlangue&nonlanguepictoalt.png";
+    }
+    else {
+        image.src = "image/Chien langue Scroll Top.png";
     }
 }
 
-// const myButton = document.querySelector('#ChienChange')
-// myButton.addEventListener('click', changeDog);
 
 
-// // 2ème méthode, sans pouvoir revenir en arrière
-// function changeDogButton1() {
-//     document.getElementById("ChienChange").src = "image/Chien langue & non langue picto.png";
+
+
+
+//** Essaie d'Algo */
+//Chien normal vert = Chienlangue&nonlanguepicto alt spring.png
+//Chien tire langue vert = Chien langue & non langue picto alt spring.png
+//     else if (themeTarget == "spring") {
+//     image.src = "Chienlangue&nonlanguepicto alt spring.png";
+// }
+// else {
+//     image.src = "Chien langue & non langue picto alt spring.png";
 // }
 
-// function changeDogButton2() {
-//     document.getElementById("ChienChange2").src = "image/Chien langue & non langue picto.png";
+
+//** Tentative 1  */
+// document.querySelectorAll(".call-function-changeDog").forEach(div => {
+//     div.addEventListener("click", event => {
+//         let themeTarget = event.currentTarget.dataset.theme;
+//         if (themeTarget == "spring") {
+//             document.querySelectorAll(".picto-theme2").forEach(autumnElement => {
+//                 autumnElement.classList.remove("bg-0");
+//                 autumnElement.classList.add("bg-0-alt");
+//             })
+//         }
+//     });
+// });
+
+//** Tentative 2  */
+// function changeDog1() {
+//     let tousLabels = document.querySelectorAll(".call-function-changeDog");
+//     tousLabels.forEach(monLabel => {
+//         if (monLabel.image.src.match("Scroll")) {
+//             monLabel.image.src = "image/Chienlangue&nonlanguepictoalt.png";
+//         }
+//         else {
+//             monLabel.image.src = "image/Chien langue Scroll Top.png";
+//         }
+//     });
 // }
+
+// let mesInputsWysiwygEvents = document.querySelectorAll(".call-function-changeDog")
+
+// mesInputsWysiwygEvents.forEach(monNoeud => {
+//     monNoeud.addEventListener("click", changeDog1);
+// });
+
+//** Tentative 3  */
+// function changeDog1() {
+//     if (themeTarget == "autumn") {
+//         document.querySelectorAll(".call-function-changeDog").forEach(image => {
+//             image.src = "image/Chienlangue&nonlanguepicto alt spring.png";
+//             image.src.add("image/Chien langue & non langue picto alt spring.png");
+//         });
+//     }
+//     else if (themeTarget == "spring") {
+//         document.querySelectorAll(".call-function-changeDog").forEach(springElement => {
+//             springElement.classList.remove("bg-0-alt");
+//             springElement.classList.add("bg-0");
+//         });
+//     };
+
+
+//** Tentative 4 */
+// function changeDog1() {
+//     let imageDog = document.getElementById('changeDog1');
+
+//     if (image.src.match("Scroll")) {
+//         imageDog.src = "image/Chienlangue&nonlanguepictoalt.png";
+//     }
+//     else {
+//         imageDog.src = "image/Chien langue Scroll Top.png";
+//     }
+// }
+
+// function changeDog2() {
+// }
+// document.getElementById('changeDog1').addEventListener('click', changeDog1);
+// document.getElementById('changeDog2').addEventListener('click', changeDog2);
