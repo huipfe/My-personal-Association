@@ -7,19 +7,23 @@
 /** Partie Bouton Remonter/descendre */
 
 //ScrollTop
-document.addEventListener("scroll", (event) => {
+document.addEventListener("scroll", () => {
     let btnScrollTop = document.getElementById("scrollTop")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+        //btnScrollTop.classList.remove("d-none") 
+        /* 1er façons de le faire, avec bootstrap */
 
-        // btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.style.display = "initial";
+        /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+        //btnScrollTop.classList.add("d-none") 
+        /* 1er façons de le faire, avec bootstrap */
 
-        // btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.style.display = "none";
+        /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
@@ -28,19 +32,19 @@ document.addEventListener("scroll", (event) => {
 
 //ScrollDown
 
-document.addEventListener("scroll", (event) => {
+document.addEventListener("scroll", () => {
     let btnScrollTop = document.getElementById("scrollDown")
     if (window.scrollY > 150) { // si mon window.scrollY est plus grand que 150
         // je veux afficher mon bouton
-        btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
 
-        //btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
+        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
     }
     else { //Sinon
         //je veux masquer le bouton
-        btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
+        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
 
-        //btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
+        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
     }
 
 });
@@ -67,15 +71,15 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             /* Dans ce cas là, on applique le thème spring */
 
             //faire la même chose, mais pour le texte
-            document.querySelectorAll(".text-bg-0-alt").forEach(autumnElement => {
-                autumnElement.classList.remove("text-bg-0-alt");
-                autumnElement.classList.add("text-bg-0");
-            });
+            // document.querySelectorAll(".text-bg-0-alt").forEach(autumnElement => {
+            //     autumnElement.classList.remove("text-bg-0-alt");
+            //     autumnElement.classList.add("text-bg-0");
+            // });
 
-            document.querySelectorAll(".text-bg-0").forEach(springElement => {
-                springElement.classList.remove("text-bg-0");
-                springElement.classList.add("text-bg-0-alt");
-            });
+            // document.querySelectorAll(".text-bg-0").forEach(springElement => {
+            //     springElement.classList.remove("text-bg-0");
+            //     springElement.classList.add("text-bg-0-alt");
+            // });
 
             //faire la même chose, pour la navbar Header bg-0 
             document.querySelectorAll(".navbar-bg-0").forEach(autumnElement => {
@@ -121,15 +125,21 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             });
 
             //faire la même chose, pour la scrollbar-track
-            document.querySelectorAll(".scrollbar-track").forEach(autumnElement => {
-                autumnElement.classList.remove("scrollbar-track");
-                autumnElement.classList.add("scrollbar-track-alt");
+            document.querySelectorAll(".webkit-scrollbar-track").forEach(autumnElement => {
+                autumnElement.classList.remove("webkit-scrollbar-track");
+                autumnElement.classList.add("webkit-scrollbar-track-alt");
             });
 
             //faire la même chose, pour la scrollbar-thumb
-            document.querySelectorAll(".scrollbar-thumb").forEach(autumnElement => {
-                autumnElement.classList.remove("scrollbar-thumb");
-                autumnElement.classList.add("scrollbar-thumb-alt");
+            document.querySelectorAll(".webkit-scrollbar-thumb").forEach(autumnElement => {
+                autumnElement.classList.remove("webkit-scrollbar-thumb");
+                autumnElement.classList.add("webkit-scrollbar-thumb-alt");
+            });
+
+            //faire la même chose, pour le Background Website, dans le body
+            document.querySelectorAll(".bg-background-website").forEach(autumnElement => {
+                autumnElement.classList.remove("bg-background-website");
+                autumnElement.classList.add("bg-background-website-alt");
             });
 
             //faire la même chose, pour le picto spring Logo theme1
@@ -182,15 +192,15 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             /* Dans ce cas là, on applique le thème autumn */
 
             //faire la même chose, mais pour le texte
-            document.querySelectorAll(".text-bg-0").forEach(autumnElement => {
-                autumnElement.classList.remove("text-bg-0");
-                autumnElement.classList.add("text-bg-0-alt");
-            });
+            // document.querySelectorAll(".text-bg-0").forEach(autumnElement => {
+            //     autumnElement.classList.remove("text-bg-0");
+            //     autumnElement.classList.add("text-bg-0-alt");
+            // });
 
-            document.querySelectorAll(".text-bg-0-alt").forEach(springElement => {
-                springElement.classList.remove("text-bg-0-alt");
-                springElement.classList.add("text-bg-0");
-            });
+            // document.querySelectorAll(".text-bg-0-alt").forEach(springElement => {
+            //     springElement.classList.remove("text-bg-0-alt");
+            //     springElement.classList.add("text-bg-0");
+            // });
 
             //faire la même chose, pour la navbar Header bg-0-alt
             document.querySelectorAll(".navbar-bg-0-alt").forEach(warningElement => {
@@ -233,6 +243,24 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             document.querySelectorAll(".ovale-navigation-alt").forEach(autumnElement => {
                 autumnElement.classList.remove("ovale-navigation-alt");
                 autumnElement.classList.add("ovale-navigation");
+            });
+
+            //faire la même chose, pour la scrollbar-track-alt
+            document.querySelectorAll(".scrollbar-track-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-track-alt");
+                autumnElement.classList.add("scrollbar-track");
+            });
+
+            //faire la même chose, pour la scrollbar-thumb-alt
+            document.querySelectorAll(".scrollbar-thumb-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("scrollbar-thumb-alt");
+                autumnElement.classList.add("scrollbar-thumb");
+            });
+
+            //faire la même chose, pour le Background Website, dans le body
+            document.querySelectorAll(".bg-background-website-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("bg-background-website-alt");
+                autumnElement.classList.add("bg-background-website");
             });
 
             //faire la même chose, pour le picto autumn Logo theme1
@@ -283,10 +311,14 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
 //NavBar Button 1
 function changeDog1() {
     let image = document.getElementById('changeDog1');
+    let spring = document.querySelector("[spring]");
+    let autumn = document.querySelector("[autumn]");
+
     if (image.src.match("Scroll")) {
+
         image.src = "image/Chienlangue&nonlanguepictoalt.png";
     }
-    else {
+    else{
         image.src = "image/Chien langue Scroll Top.png";
     }
 
@@ -313,8 +345,19 @@ function changeDog2() {
     }
 }
 
+//Contact Button
+function changeDog3() {
+    let image = document.getElementById('changeDog3');
 
+    if (image.src.match("Scroll")) {
 
+        image.src = "image/Chienlangue&nonlanguepictoalt.png";
+    }
+    else {
+        image.src = "image/Chien langue Scroll Top.png";
+    }
+
+}
 
 
 

@@ -1,5 +1,5 @@
 :root,
-[data-theme="autumn"] {
+[data-theme="spring"] {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -120,6 +120,8 @@
     --bs-breakpoint-xl: 1200px;
     --bs-breakpoint-xxl: 1400px;
 
+    
+
     /* Autumn Part - Warm Naturals*/
     /* Bark bg-4 & btn-scrolltop*/
     --color-Bark: #2e2300;
@@ -169,7 +171,21 @@ body {
         --Lime: #a2c523;
         /* spring-green bg-1-alt*/
         --Earth: #89da59;
+
 }
+        /* Class Body */
+        /* Background Website (Autunm version)*/
+        .bg-background-website {
+            background-color: var(--color-SeaweedGreen);
+            background-image: url("image/protruding-squares.svg");
+        }
+
+        /* Background Website (Spring version)*/
+        .bg-background-website-alt {
+            background-color: var(--Grass);
+            background-image: url("image/protruding-squares spring.svg");
+        }
+
 
 /* .bg-site {
         background-color: #db9501;
@@ -243,17 +259,18 @@ de l'association */
 }
 .bg-2-alt {
     background-color: var(--Grass);
-    color: #ffffff;
+    color: #000000;
 }
+
 /* Article */
 
 
 /* Section 3 Contact */
 .bg-3 {
-    color: #000000;
+    color: #ffffff;
 }
 .bg-3-alt {
-    color: #000000;
+    color: #ffffff;
 }
 /* Bouton Primary Personnalisé */
 
@@ -274,7 +291,7 @@ de l'association */
     --bs-btn-disabled-border-color: var(--Grass);
 }
 
-.btn-doggy {
+.btn-doggy { 
     --bs-btn-color: #6e6702;
     --bs-btn-bg: #6e6702;
     --bs-btn-border-color: none;
@@ -290,6 +307,7 @@ de l'association */
     --bs-btn-disabled-bg: var(--color-SeaweedGreen);
     --bs-btn-disabled-border-color: var(--color-SeaweedGreen);
 }
+
 
 /* Footer */
 

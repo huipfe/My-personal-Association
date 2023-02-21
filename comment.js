@@ -2,7 +2,7 @@
 //Comment récupérer en queryselector, en fonction du type d'élements : 
 /**
  * ID = "#ID"
- * data-exemple = "[data-exemple]""
+ * data-exemple = "[data-exemple]"
  * class = ".class"
  */
 
