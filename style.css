@@ -113,12 +113,12 @@
     --bs-form-control-bg: var(--bs-body-bg);
     --bs-form-control-disabled-bg: var(--bs-secondary-bg);
     --bs-highlight-bg: #fff3cd;
-    --bs-breakpoint-xs: 0;
-    --bs-breakpoint-sm: 576px;
-    --bs-breakpoint-md: 768px;
-    --bs-breakpoint-lg: 992px;
-    --bs-breakpoint-xl: 1200px;
-    --bs-breakpoint-xxl: 1400px;
+    --bs-breakpoint-xs: 0; /*0 à 576*/
+    --bs-breakpoint-sm: 576px; /*576 à 768*/
+    --bs-breakpoint-md: 768px; /*768 à 992*/
+    --bs-breakpoint-lg: 992px; /*992 à 1200*/
+    --bs-breakpoint-xl: 1200px; /*1200 à 1400*/
+    --bs-breakpoint-xxl: 1400px; /*+ de 1400*/
 
     
 
@@ -205,7 +205,7 @@ body {
 
 .bg-0-alt {
     background-color: var(--Lime);
-    color: #ffffff;
+    color: #000;
 }
 
 ul.ovale-navigation {
@@ -246,7 +246,7 @@ de l'association */
 }
 .bg-1-alt {
     background-color: var(--Earth);
-    color: #ffffff;
+    color: #000;
 }
 /* Article */
 
@@ -259,7 +259,7 @@ de l'association */
 }
 .bg-2-alt {
     background-color: var(--Grass);
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Article */
