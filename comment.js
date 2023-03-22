@@ -110,3 +110,80 @@ width: 120px;
 div .call-function-changeDog.active {
     background-image: url("image/Chien langue Scroll Top.png");
 } */
+
+//------------------------Algo & test part-----------------------------
+//** Essaie d'Algo */
+//Chien normal vert = Chienlangue&nonlanguepicto alt spring.png
+//Chien tire langue vert = Chien langue & non langue picto alt spring.png
+//     else if (themeTarget == "spring") {
+//     image.src = "Chienlangue&nonlanguepicto alt spring.png";
+// }
+// else {
+//     image.src = "Chien langue & non langue picto alt spring.png";
+// }
+
+
+//** Tentative 1  */
+// document.querySelectorAll(".call-function-changeDog").forEach(div => {
+//     div.addEventListener("click", event => {
+//         let themeTarget = event.currentTarget.dataset.theme;
+//         if (themeTarget == "spring") {
+//             document.querySelectorAll(".picto-theme2").forEach(autumnElement => {
+//                 autumnElement.classList.remove("bg-0");
+//                 autumnElement.classList.add("bg-0-alt");
+//             })
+//         }
+//     });
+// });
+
+//** Tentative 2  */
+// function changeDog1() {
+//     let tousLabels = document.querySelectorAll(".call-function-changeDog");
+//     tousLabels.forEach(monLabel => {
+//         if (monLabel.image.src.match("Scroll")) {
+//             monLabel.image.src = "image/Chienlangue&nonlanguepictoalt.png";
+//         }
+//         else {
+//             monLabel.image.src = "image/Chien langue Scroll Top.png";
+//         }
+//     });
+// }
+
+// let mesInputsWysiwygEvents = document.querySelectorAll(".call-function-changeDog")
+
+// mesInputsWysiwygEvents.forEach(monNoeud => {
+//     monNoeud.addEventListener("click", changeDog1);
+// });
+
+//** Tentative 3  */
+// function changeDog1() {
+//     if (themeTarget == "autumn") {
+//         document.querySelectorAll(".call-function-changeDog").forEach(image => {
+//             image.src = "image/Chienlangue&nonlanguepicto alt spring.png";
+//             image.src.add("image/Chien langue & non langue picto alt spring.png");
+//         });
+//     }
+//     else if (themeTarget == "spring") {
+//         document.querySelectorAll(".call-function-changeDog").forEach(springElement => {
+//             springElement.classList.remove("bg-0-alt");
+//             springElement.classList.add("bg-0");
+//         });
+//     };
+
+
+//** Tentative 4 */
+// function changeDog1() {
+//     let imageDog = document.getElementById('changeDog1');
+
+//     if (image.src.match("Scroll")) {
+//         imageDog.src = "image/Chienlangue&nonlanguepictoalt.png";
+//     }
+//     else {
+//         imageDog.src = "image/Chien langue Scroll Top.png";
+//     }
+// }
+
+// function changeDog2() {
+// }
+// document.getElementById('changeDog1').addEventListener('click', changeDog1);
+// document.getElementById('changeDog2').addEventListener('click', changeDog2);

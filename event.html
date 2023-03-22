@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" id="#event">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,36 @@
 </head>
 
 <body class="container-fluid bg-site text-light bg-background-website">
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">Action 1</a>
+            <a class="dropdown-item" href="#">Action 2</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav> -->
 
     <!-- Header part - Navigation -->
     <header class="container-fluid bg-site">
@@ -41,16 +71,16 @@
                     <!-- cliquer dessus pour faire réparaitre les éléments de la barre de navig quand on est en lg-->
                     <button data-for="ChienNavbar1" type="button" class="navbar-toggler " data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" arial-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="toggle navigation" data-clickdog onclick="changeDog1()">
+                        aria-label="toggle navigation" data-clickdog>
                         <!-- Image du bouton (voir documentation boostrap pour avoir une autre image)-->
                         <a href="#presentation"></a> <img src="image/Chienlangue&nonlanguepictoalt.png" width="42"
-                            height="42" class="me-1 picto-theme2 call-function-changeDog"
-                            alt="Chien langue & non langue picto" id="changeDog1">
+                            height="42" class="me-1 picto-theme2 changeDog"
+                            alt="Chien langue & non langue picto">
                     </button>
     
                     <!-- Modal Button -->
     
-                    <button type="button" class="btn btn-warning-text" data-bs-toggle="modal"
+                    <button type="button" class="btn btn-warning-text mx-lg-3" data-bs-toggle="modal"
                         data-bs-target="#settingsModal">
                         <img src="image/Chien parametre.png" width="42" height="auto" class="picto-theme3">
                     </button>
@@ -65,40 +95,40 @@
                             <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
     
-                                <ul class="navbar-nav col-12 col-md-10 me-lg-10 mb-md-1 justify-content-center mb-md-0">
+                                <ul class="navbar-nav col-12 col-md-10 me-lg-12 mb-md-1 justify-content-center mb-md-0">
                                     <!-- <ul class="navbar-nav bg-0"> -->
                                     <li class="nav-item">
-                                        <a href="#presentation"
-                                            class="nav-link color-white-link fs-6 fw-bold col col-md-3 ">Présentation de
+                                        <a href="/index.html#presentation"
+                                            class="nav-link color-white-link fs-6 fw-bold col col-lg-10 ">Présentation de
                                             l'association</a>
                                         <!-- active permet de mettre en surbrillance l'élement -->
                                     </li>
     
                                     <li class="nav-item">
-                                        <a href="#objectif" class="nav-link color-white-link fs-6 fw-bold col col-md-3">Nos
+                                        <a href="/index.html#objectif" class="nav-link color-white-link fs-6 fw-bold col col-md-3">Nos
                                             Objectifs</a>
                                     </li>
     
                                     <li class="nav-item ">
-                                        <a href="#gallerie-image"
+                                        <a href="/index.html#gallerie-image"
                                             class="nav-link color-white-link fs-6 fw-bold col col-md-3">Les petits chiens du
                                             monde</a>
                                     </li>
     
                                     <li class="nav-item">
-                                        <a href="#contact" class="nav-link color-white-link fs-6 fw-bold col col-md-3">Nous
+                                        <a href="/index.html#contact" class="nav-link color-white-link fs-6 fw-bold col col-md-3">Nous
                                             contacter</a>
                                     </li>
                                 </ul>
     
-    
+  
     
                                 <div class="dropdown text-end">
                                     <a href="#" class="d-block link-light text-decoration-none dropdown-toggle"
-                                        data-bs-toggle="dropdown" aria-expanded="false" onclick="changeDog2()">
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         <img data-for="ChienNavbar2" src="image/Chienlangue&nonlanguepictoalt.png" alt="mdo"
                                             width="32" height="32"
-                                            class="rounded-circle call-function-changeDog picto-theme2" id="changeDog2">
+                                            class="rounded-circle changeDog picto-theme2">
                                     </a>
                                     <ul class="dropdown-menu text-small ovale-navigation">
                                         <!-- <li><a class="dropdown-item" href="#navigation"></a></li> -->
@@ -117,7 +147,6 @@
                             </div>
                         </div>
                     </header>
-    
             </nav>
         </section>
     
@@ -319,10 +348,8 @@
         </div>
     </div>
 
-    
-    <!-- Local Javascript -->
-    <script src="script.js"></script>
-    
+
+
     <!-- Local Bootstrap Javascript-->
     <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
@@ -334,7 +361,10 @@
     
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
         crossorigin="anonymous"></script>
-    
+
+    <!-- Local Javascript -->
+    <script src="script.js"></script>
+
     </body>
     
     </html>
