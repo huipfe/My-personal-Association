@@ -6,7 +6,11 @@
 
 /** Partie Bouton Remonter/descendre */
 
+document50Percent = document.length / 2 //50% de la page
+documentMore50Percent = document50Percent + 1//+ de 50% de la page
+
 //ScrollTop
+
 document.addEventListener("scroll", () => {
     let btnScrollTop = document.getElementById("scrollTop")
     if (window.scrollY > 200) { // si mon window.scrollY est plus grand que 150
@@ -175,6 +179,12 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             document.querySelectorAll(".picto-theme6").forEach(imageSpring => {
                 imageSpring.src = "image/Chienlangue&nonlanguepicto alt spring.png";
             });
+
+            //faire la même chose, pour le button btn-down
+            document.querySelectorAll(".btn-down").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-down");
+                autumnElement.classList.add("btn-down-alt");
+            });
         }
 
         //autumn = Chaud, thème Autonme/dark/no alt/bg-0,1,2,3,4/warning
@@ -294,6 +304,12 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
             //faire la même chose, pour le picto autumn button bouton contact envoyé theme6
             document.querySelectorAll(".picto-theme6").forEach(imageSpring => {
                 imageSpring.src = "image/Chienlangue&nonlanguepictoalt.png";
+            });
+
+            //faire la même chose, pour le button btn-down-alt
+            document.querySelectorAll(".btn-down-alt").forEach(autumnElement => {
+                autumnElement.classList.remove("btn-down-alt");
+                autumnElement.classList.add("btn-down");
             });
         }
 

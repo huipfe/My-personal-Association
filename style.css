@@ -288,8 +288,8 @@ ul.ovale-navigation-alt {
 
 a.color-white-link {
     color: #ffffff;
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     /* font-size: 10px;  */
 }
 
@@ -301,6 +301,22 @@ li.a.nav-link {
     color: var(--bs-nav-link-color);
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.btn-down {
+background-color: var(--color-Bronze);
+fill : var(--color-SeaweedGreen);
+/* cursor: pointer; */
+border-radius: 50%;
+border-color: var(--color-Goldenrod);
+}
+
+.btn-down-alt {
+background-color: var(--Lime);
+fill: var(--Grass);
+cursor: pointer;
+border-radius: 50%;
+border-color: var(--Earth);
 }
 
 /* jQuery function on button */
