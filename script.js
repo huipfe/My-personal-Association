@@ -6,51 +6,31 @@
 
 /** Partie Bouton Remonter/descendre */
 
-document50Percent = document.length / 2 //50% de la page
-documentMore50Percent = document50Percent + 1//+ de 50% de la page
-
 //ScrollTop
-
+// (window.innerHeight / 2)
 document.addEventListener("scroll", () => {
-    let btnScrollTop = document.getElementById("scrollTop")
-    if (window.scrollY > 200) { // si mon window.scrollY est plus grand que 150
-        // je veux afficher mon bouton
-        btnScrollTop.classList.remove("d-none") 
-        /* 1er façons de le faire, avec bootstrap */
+    let btnScrollTop = document.getElementById("scrollTop");
+    let halfPageHeightTop = document.body.scrollHeight / 2.5;
 
-        // btnScrollTop.style.display = "initial";
-        /* 2ème façons de le faire sans bootstrap */
+    if (window.scrollY > halfPageHeightTop) {
+        btnScrollTop.style.display = "initial";
+    } else {
+        btnScrollTop.style.display = "none";
     }
-    else { //Sinon
-        //je veux masquer le bouton
-        btnScrollTop.classList.add("d-none") 
-        /* 1er façons de le faire, avec bootstrap */
-
-        // btnScrollTop.style.display = "none";
-        /* 2ème façons de le faire sans bootstrap*/
-    }
-
 });
-//d-none est une classe en bootstrap qui veut dire display-none, pour afficher ou ne pas afficher.
 
 
 //ScrollDown
 
 document.addEventListener("scroll", () => {
-    let btnScrollTop = document.getElementById("scrollDown")
-    if (window.scrollY > 200) { // si mon window.scrollY est plus grand que 150
-        // je veux afficher mon bouton
-        //btnScrollTop.classList.add("d-none") /* 1er façons de le faire, avec bootstrap */
+    let btnScrollTop = document.getElementById("scrollDown");
+    let halfPageHeightDown = document.body.scrollHeight / 2.5;
 
-        btnScrollTop.style.display = "none" /* 2ème façons de le faire sans bootstrap */
+    if (window.scrollY < halfPageHeightDown) {
+        btnScrollTop.style.display = "initial";
+    } else {
+        btnScrollTop.style.display = "none";
     }
-    else { //Sinon
-        //je veux masquer le bouton
-        //btnScrollTop.classList.remove("d-none") /* 1er façons de le faire, avec bootstrap */
-
-        btnScrollTop.style.display = "initial" /* 2ème façons de le faire sans bootstrap*/
-    }
-
 });
 
 
@@ -322,105 +302,71 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
  * remplacer par un chien qui tire la langue,
  * en fonction de si on clique ou pas dessus */
 
-//Méthode via onclick, direct, via une fonction, sur le bouton, dans le html
 
-// document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
-//     div.addEventListener("click", event => { })
-// })
+// Autumn
+let img = document.querySelector("img.changeDog");
+let button = document.querySelector("button.changeDog");
 
-// document.getElementsByClassName('.changeDog').forEach(changeDog => {
-//     changeDog.addEventListener("click", event => { 
-//     let imageDog = 
-//     }) 
-// })
+let firstImage = "image/Chienlangue&nonlanguepictoalt.png";
+let secondImage = "image/Chien langue Scroll Top.png";
+let currentImage = firstImage;
 
+button.addEventListener("click", function () {
+    if (currentImage == firstImage) {
+        img.src = secondImage;
+        currentImage = secondImage;
+    } else {
+        img.src = firstImage;
+        currentImage = firstImage;
+    }
+});
 
-//NavBar Button 1
+// Spring
+let imgSpring = document.querySelector("img.changeDog");
+let buttonSpring = document.querySelector("button.changeDog");
+let currentImageSpring = firstImageSpring;
+let themeTarget = event.currentTarget.dataset.theme;
+let firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
+let secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
+button.addEventListener("click", function () {
+    if (themeTarget === "spring" && currentImageSpring == firstImageSpring) {
+        img.src = secondImage;
+        currentImageSpring = secondImageSpring;
+    } else {
+        img.src = firstImageSpring;
+        currentImageSpring = firstImageSpring;
+    }
+});
 
-// function changeDog() {
-//     let image = document.getElementsByClassName('.changeDog');
-//     let spring = document.querySelector("[spring]");
-//     let autumn = document.querySelector("[autumn]");
+// let img = document.querySelector("img.changeDog");
+// let themeTarget = currentTarget.dataset.theme;
 
-//     if (image.src.match("Scroll")) {
+// let firstImageAutumn = "image/Chienlangue&nonlanguepictoalt.png";
+// let secondImageAutumn = "image/Chien langue Scroll Top.png";
+// let currentImageAutumn = firstImageAutumn;
 
-//         image.src = "image/Chienlangue&nonlanguepictoalt.png";
+// let currentImageSpring = firstImageSpring;
+// let firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
+// let secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
+
+// img.addEventListener("click", function () {
+//     if (themeTarget == "autumn" && currentImage == firstImageAutumn) {
+//         img.src = secondImageAutumn;
+//         currentImageAutumn = secondImageAutumn;
+        
+//     } else {
+//         img.src = firstImageAutumn;
+//         currentImageAutumn = firstImageAutumn;
 //     }
-//     else{
-//         image.src = "image/Chien langue Scroll Top.png";
-//     }
-
-    // Si on est en mode printemps
-    // let imageSpring = document.getElementById('changeDog1');
-    // if (image.src.match("spring")) {
-    //     imageSpring.src = "image/Chienlangue&nonlanguepicto alt spring.png";
-
-    // }
-    // else {
-    //     imageSpring.src = "image/Chien langue & non langue picto alt spring.png";
-
-    // }
-
-
-// }
-
-//NavBar Button 2 
-// function changeDog2() {
-//     let image = document.getElementById('changeDog2');
-//     if (image.src.match("Scroll")) {
-//         image.src = "image/Chienlangue&nonlanguepictoalt.png";
-//     }
-//     else {
-//         image.src = "image/Chien langue Scroll Top.png";
-//     }
-// }
-
-//Contact Button
-// function changeDog3() {
-//     let image = document.getElementById('changeDog3');
-
-//     if (image.src.match("Scroll")) {
-
-//         image.src = "image/Chienlangue&nonlanguepictoalt.png";
-//     }
-//     else {
-//         image.src = "image/Chien langue Scroll Top.png";
-//     }
-
-// }
-
-
-/** Test with jQuery */
-
-/** Tips jQuery
- * classe : $('.bases')
- * ID : $('#bases')
- * balise : $('div')
- */
-
-
-//Init jQuery
-// Test #1
-// $(document).ready( () => {
-//     // alert('jQuery Actived')
-
-//     //Function for changeDog
-//     $(() => {
-//         //Au clique je veux que...
-//         $('.changeDog').click(function () {
-
-//             //Sur chacun de ceux qui ne sont pas cliquer, j'enlève la classe langue
-//             $('.changeDog').each(function () {
-//             $(this).removeClass('langue');
-//             });
-
-//             //Pour celui sur lequel je clique, je rajoute la class langue.
-//             $(this).addClass('langue');
-//         });
-//     });
-
 // });
 
-
-/** */
+// img.addEventListener("click", function () {
+//     if (themeTarget == "spring" && currentImage == firstImageSpring) {
+//         img.src = secondImageSpring;
+//         currentImageSpring = secondImageSpring;
+//     } else {
+//         img.src = firstImageSpring;
+//         currentImageSpring = firstImageSpring;
+//     }
+// });
 
