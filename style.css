@@ -226,8 +226,9 @@
 }
 
 /* Global Color, use for entierly project */
-body {
+body { 
 
+        min-width: 350px;
     /* Autumn Part - Warm Naturals*/
         /* Bark bg-4 & btn-scrolltop*/
         --color-Bark: #2e2300;

@@ -292,7 +292,6 @@ document.querySelectorAll(".ChangeThemeDiv").forEach(div => {
                 autumnElement.classList.add("btn-down");
             });
         }
-
     });
 });
 
