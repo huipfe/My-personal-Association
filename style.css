@@ -287,11 +287,24 @@ ul.ovale-navigation-alt {
     background-color: var(--Lime);
 }
 
+@media only screen and (min-width: 1200px) {
+ul.ovale-navigation {
+    
+    }
+}
+
 a.color-white-link {
     color: #ffffff;
     padding: 10px;
-    margin: 5px;
+    margin: 6px;
     /* font-size: 10px;  */
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+a.color-white-link {
+    color: #ffffff;
+    padding: 10px;
+    margin: 12px;
+    }
 }
 
 /* NavBar */
@@ -309,7 +322,8 @@ li.a.nav-link {
 .btn-down {
 background-color: var(--color-Bronze);
 fill : var(--color-SeaweedGreen);
-/* cursor: pointer; */
+cursor: pointer;
+
 border-radius: 50%;
 border-color: var(--color-Goldenrod);
 }
@@ -322,20 +336,13 @@ border-radius: 50%;
 border-color: var(--Earth);
 }
 
-@media only screen and (max-width: 1050px) and (min-width: 992px) {
-  .nav-item:nth-child(4) {
-  }
-  
+@media only screen and (max-width: 1075px) and (min-width: 992px) {
     .navbar-nav .nav-item:last-child a p {
     position: absolute;
     bottom: 0;
     left: 56%;
-
-  }
+    }
 }
-
-
-
 
 
 /* Main */
