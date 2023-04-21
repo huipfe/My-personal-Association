@@ -33,20 +33,21 @@ handleScroll("scrollDown", (scrollY, halfPageHeight) => scrollY < halfPageHeight
  * changement de thème dans la page, thème Autonme ou Printemps */
 
 function changeTheme(theme) {
-    // Classes à remplacer pour le thème printemps (newClass) & automne (oldClass)
-    const springAutomneClasses = [
-        { oldClass: 'bg-0', newClass: 'bg-0-alt' },
-        { oldClass: 'navbar-bg-0', newClass: 'navbar-bg-0-alt' },
-        { oldClass: 'btn-doggy', newClass: 'btn-doggy-alt' },
-        { oldClass: 'bg-1', newClass: 'bg-1-alt' },
-        { oldClass: 'bg-2', newClass: 'bg-2-alt' },
-        { oldClass: 'bg-4', newClass: 'bg-4-alt' },
-        { oldClass: 'bg-modal-1', newClass: 'bg-modal-1-alt' },
-        { oldClass: 'ovale-navigation', newClass: 'ovale-navigation-alt' },
-        { oldClass: 'btn-down', newClass : 'btn-down-alt'},
-        { oldClass: 'webkit-scrollbar-track', newClass: 'webkit-scrollbar-track-alt' },
-        { oldClass: 'webkit-scrollbar-thumb', newClass: 'webkit-scrollbar-thumb-alt' },
-        { oldClass: 'bg-background-website', newClass: 'bg-background-website-alt' }
+    // Classes à remplacer pour le thème printemps (springClass) & automne (autumnClass)
+    const springAutumnClasses = [
+        { autumnClass: 'bg-0', springClass: 'bg-0-alt' },
+        { autumnClass: 'navbar-bg-0', springClass: 'navbar-bg-0-alt' },
+        { autumnClass: 'btn-doggy', springClass: 'btn-doggy-alt' },
+        { autumnClass: 'bg-1', springClass: 'bg-1-alt' },
+        { autumnClass: 'bg-2', springClass: 'bg-2-alt' },
+        { autumnClass: 'bg-4', springClass: 'bg-4-alt' },
+        { autumnClass: 'bg-modal-1', springClass: 'bg-modal-1-alt' },
+        { autumnClass: 'ovale-navigation', springClass: 'ovale-navigation-alt' },
+        { autumnClass: 'btn-down', springClass : 'btn-down-alt'},
+        { autumnClass: 'scrollbar-track', springClass: 'scrollbar-track-alt' },
+        { autumnClass: 'scrollbar-thumb', springClass: 'scrollbar-thumb-alt' },
+        { autumnClass: 'bg-background-website', springClass: 'bg-background-website-alt'},
+        { autumnClass: 'changeDog', springClass: 'changeDogSpring'},
     ];
 
     // Images à remplacer pour le thème printemps
@@ -56,7 +57,7 @@ function changeTheme(theme) {
         { selector: '.picto-theme3', src: 'image/Chien parametre alt spring.png' },
         { selector: '.picto-theme5', src: 'image/Chien langue & non langue picto alt spring.png' },
         { selector: '.picto-theme4', src: 'image/Chien langue & non langue picto alt spring scrolldown.png' },
-        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepicto alt spring.png' }
+        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepicto alt spring.png' },
     ];
 
     // Images à remplacer pour le thème automne
@@ -66,16 +67,17 @@ function changeTheme(theme) {
         { selector: '.picto-theme3', src: 'image/Chien parametre.png' },
         { selector: '.picto-theme5', src: 'image/Chien langue Scroll Top.png' },
         { selector: '.picto-theme4', src: 'image/Chien langue Scroll Down.png' },
-        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepictoalt.png' }
+        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepictoalt.png' },
+
     ];
 
 
     if (theme === 'spring') {
         // Remplacement des classes
-        springAutomneClasses.forEach(cls => {
-            document.querySelectorAll(`.${cls.oldClass}`).forEach(element => {
-                element.classList.remove(cls.oldClass);
-                element.classList.add(cls.newClass);
+        springAutumnClasses.forEach(cls => {
+            document.querySelectorAll(`.${cls.autumnClass}`).forEach(element => {
+                element.classList.remove(cls.autumnClass);
+                element.classList.add(cls.springClass);
             });
         });
 
@@ -88,10 +90,10 @@ function changeTheme(theme) {
 
     } else if (theme === 'autumn') {
         // Remplacement des classes
-        springAutomneClasses.forEach(cls => {
-            document.querySelectorAll(`.${cls.newClass}`).forEach(element => {
-                element.classList.remove(cls.newClass);
-                element.classList.add(cls.oldClass);
+        springAutumnClasses.forEach(cls => {
+            document.querySelectorAll(`.${cls.springClass}`).forEach(element => {
+                element.classList.remove(cls.springClass);
+                element.classList.add(cls.autumnClass);
             });
         });
 
@@ -112,83 +114,41 @@ document.querySelectorAll('.ChangeThemeDiv').forEach(div => {
     });
 });
 
-
-
 /** 3. Faire apparaitre disparaitre : 
  * L'image du chien de base : 
  * remplacer par un chien qui tire la langue,
  * en fonction de si on clique ou pas dessus */
 
 // Autumn
-let img = document.querySelector("img.changeDog");
-let button = document.querySelector("button.changeDog");
+const imgAutumn = document.querySelector("img.changeDog");
+const buttonAutumn = document.querySelector("button.changeDog");
+const firstImageAutumn = "image/Chienlangue&nonlanguepictoalt.png";
+const secondImageAutumn = "image/Chien langue Scroll Top.png";
+let currentImageAutumn = firstImageAutumn;
 
-let firstImage = "image/Chienlangue&nonlanguepictoalt.png";
-let secondImage = "image/Chien langue Scroll Top.png";
-let currentImage = firstImage;
-
-button.addEventListener("click", function () {
-    if (currentImage == firstImage) {
-        img.src = secondImage;
-        currentImage = secondImage;
+buttonAutumn.addEventListener("click", function () {
+    if (currentImageAutumn === firstImageAutumn) {
+        imgAutumn.src = secondImageAutumn;
+        currentImageAutumn = secondImageAutumn;
     } else {
-        img.src = firstImage;
-        currentImage = firstImage;
+        imgAutumn.src = firstImageAutumn;
+        currentImageAutumn = firstImageAutumn;
     }
 });
 
 // Spring
-let imgSpring = document.querySelector("img.changeDog");
-let buttonSpring = document.querySelector("button.changeDog");
+const imgSpring = document.querySelector("img.changeDogSpring");
+const buttonSpring = document.querySelector("button.changeDogSpring");
+const firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
+const secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
 let currentImageSpring = firstImageSpring;
 
-let firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
-let secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
-
-button.addEventListener("click", function () {
-    if (theme === 'spring' && currentImageSpring == firstImageSpring) {
-        img.src = secondImage;
+buttonSpring.addEventListener("click", function () {
+    if (theme === 'spring' && currentImageSpring === firstImageSpring) {
+        imgSpring.src = secondImageSpring;
         currentImageSpring = secondImageSpring;
     } else {
-        img.src = firstImageSpring;
+        imgSpring.src = firstImageSpring;
         currentImageSpring = firstImageSpring;
     }
 });
-
-
-
-// // Autumn
-// let imgAutumn = document.querySelector("img.changeDog");
-// let buttonAutumn = document.querySelector("button.changeDog");
-
-// let firstImageAutumn = "image/Chienlangue&nonlanguepictoalt.png";
-// let secondImageAutumn = "image/Chien langue Scroll Top.png";
-// let currentImageAutumn = firstImageAutumn;
-
-// buttonAutumn.addEventListener("click", function () {
-//     if (currentImageAutumn == firstImageAutumn) {
-//         imgAutumn.src = secondImageAutumn;
-//         currentImageAutumn = secondImageAutumn;
-//     } else {
-//         imgAutumn.src = firstImageAutumn;
-//         currentImageAutumn = firstImageAutumn;
-//     }
-// });
-
-// // Spring
-// let imgSpring = document.querySelector("img.changeDog");
-// let buttonSpring = document.querySelector("button.changeDog");
-
-// let firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
-// let secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
-// let currentImageSpring = firstImageSpring;
-
-// buttonSpring.addEventListener("click", function () {
-//     if (currentImageSpring == firstImageSpring) {
-//         imgSpring.src = secondImageSpring;
-//         currentImageSpring = secondImageSpring;
-//     } else {
-//         imgSpring.src = firstImageSpring;
-//         currentImageSpring = firstImageSpring;
-//     }
-// });
