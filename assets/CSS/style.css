@@ -254,13 +254,13 @@ body {
         /* Background Website (Autunm version)*/
         .bg-background-website {
             background-color: var(--color-SeaweedGreen);
-            background-image: url("image/protruding-squares.svg");
+            background-image: url("/image/SVG/protruding-squares.svg");
         }
 
         /* Background Website (Spring version)*/
         .bg-background-website-alt {
             background-color: var(--Grass);
-            background-image: url("image/protruding-squares spring.svg");
+            background-image: url("/image/SVG/protruding-squares\ spring.svg");
         }
 
 

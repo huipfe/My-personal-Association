@@ -137,11 +137,13 @@ buttonAutumn.addEventListener("click", function () {
 });
 
 // Spring
-const imgSpring = document.querySelector("img.changeDogSpring");
-const buttonSpring = document.querySelector("button.changeDogSpring");
+const imgSpring = document.querySelector("img.changeDog");
+const buttonSpring = document.querySelector("button.changeDog");
 const firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
 const secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
 let currentImageSpring = firstImageSpring;
+// const theme = document.querySelector("button.changeDog").dataset.theme;
+
 
 buttonSpring.addEventListener("click", function () {
     if (theme === 'spring' && currentImageSpring === firstImageSpring) {
