@@ -264,9 +264,6 @@ body {
         }
 
 
-/* First Page */
-
-
 /* Header */
 
 .bg-0 {
@@ -341,6 +338,59 @@ border-color: var(--Earth);
     position: absolute;
     bottom: 0;
     left: 56%;
+    }
+}
+
+/* Font Size */
+
+/* Font Size */
+
+@media only screen and (max-width: 1299px) and (min-width: 1250px) {
+    .navbar-nav .nav-item a p {
+        font-size: 1rem;
+    }
+    .navbar-brand.color-white-link {
+        margin: 4px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 1300px) {
+    .navbar-nav .nav-item a p {
+        font-size: 1.2rem;
+    }
+    .navbar-brand.color-white-link {
+        margin: 3px;
+        font-size: 1.2rem!important;
+    }
+    ul.navbar-nav {
+        gap: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 1499px) and (min-width: 1400px) {
+    .navbar-nav .nav-item a p {
+        font-size: 1.2rem;
+    }
+    .navbar-brand.color-white-link {
+        margin: 2px;
+        font-size: 1.2rem!important;
+    }
+    ul.navbar-nav {
+        gap: 3.8rem;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .navbar-nav .nav-item a p {
+        font-size: 1.5rem;
+    }
+    a.navbar-brand.color-white-link {
+        margin: 2px;
+        font-size: 1.5rem!important;
+    }
+    ul.navbar-nav {
+        gap: 4.5rem;
     }
 }
 
@@ -431,25 +481,6 @@ de l'association */
     --bs-btn-disabled-bg: var(--color-SeaweedGreen);
     --bs-btn-disabled-border-color: var(--color-SeaweedGreen);
 }
-
-/* End First page */
-
-/* --------------------------------------------------------- */
-
-/* Second page */
-
-/* Main */
-
-/* Section #0 Illustration/Photographie de l'évènement */
-
-/* Article */
-
-/* Section #1 Détail de l'évènement */
-
-/* End of Second page */
-
-/* ---------------------------------------------------------- */
-
 
 /* Footer */
 

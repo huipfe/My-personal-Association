@@ -47,8 +47,14 @@ function changeTheme(theme) {
         { autumnClass: 'scrollbar-track', springClass: 'scrollbar-track-alt' },
         { autumnClass: 'scrollbar-thumb', springClass: 'scrollbar-thumb-alt' },
         { autumnClass: 'bg-background-website', springClass: 'bg-background-website-alt'},
-        { autumnClass: 'changeDog', springClass: 'changeDogSpring'},
+        { autumnClass: 'changeDog', springClass: 'hangeDog2'},
     ];
+
+    // const springAutumnId = [ 
+    //     { autumnId: 'changeDog', springId: 'changeDog2' },
+
+
+    // ];
 
     // Images à remplacer pour le thème printemps
     const springImages = [
@@ -57,8 +63,7 @@ function changeTheme(theme) {
         { selector: '.picto-theme3', src: 'image/Chien parametre alt spring.png' },
         { selector: '.picto-theme5', src: 'image/Chien langue & non langue picto alt spring.png' },
         { selector: '.picto-theme4', src: 'image/Chien langue & non langue picto alt spring scrolldown.png' },
-        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepicto alt spring.png' },
-    ];
+        { selector: '.picto-theme6', src: 'image/Chienlangue&nonlanguepicto alt spring.png' },    ];
 
     // Images à remplacer pour le thème automne
     const AutunmImages = [
@@ -81,12 +86,21 @@ function changeTheme(theme) {
             });
         });
 
+        // // Remplacement des ID
+        // springAutumnId.forEach(cls => {
+        //     document.querySelectorAll(`.${cls.autumnId}`).forEach(element => {
+        //         element.classList.remove(cls.autumnId);
+        //         element.classList.add(cls.springId);
+        //     });
+        // });
+
         // Remplacement des images
         springImages.forEach(image => {
             document.querySelectorAll(image.selector).forEach(element => {
                 element.src = image.src;
             });
         });
+
 
     } else if (theme === 'autumn') {
         // Remplacement des classes
@@ -106,13 +120,14 @@ function changeTheme(theme) {
     }
 }
 
+
 // Button ChangeTheme click
 document.querySelectorAll('.ChangeThemeDiv').forEach(div => {
     div.addEventListener('click', event => {
         const themeTarget = event.currentTarget.dataset.theme;
-        changeTheme(themeTarget);
-    });
+        changeTheme(themeTarget);    });
 });
+
 
 /** 3. Faire apparaitre disparaitre : 
  * L'image du chien de base : 
@@ -136,21 +151,55 @@ buttonAutumn.addEventListener("click", function () {
     }
 });
 
-// Spring
-const imgSpring = document.querySelector("img.changeDog");
-const buttonSpring = document.querySelector("button.changeDog");
-const firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
-const secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
-let currentImageSpring = firstImageSpring;
-// const theme = document.querySelector("button.changeDog").dataset.theme;
+// // Spring
+// const imgSpring = document.querySelector("img.changeDog2");
+// const buttonSpring = document.querySelector("button.changeDog2");
+// const firstImageSpring = "image/Chienlangue&nonlanguepictoalt-spring.png";
+// const secondImageSpring = "image/Chien langue & non langue picto alt spring.png";
+// let currentImageSpring = firstImageSpring;
+
+// buttonSpring.addEventListener("click", function () {
+//     if (currentImageSpring === firstImageSpring) {
+//         imgSpring.src = secondImageSpring;
+//         currentImageSpring = secondImageSpring;
+//     } else {
+//         imgSpring.src = firstImageSpring;
+//         currentImageSpring = firstImageSpring;
+//     }
+// });
 
 
-buttonSpring.addEventListener("click", function () {
-    if (theme === 'spring' && currentImageSpring === firstImageSpring) {
-        imgSpring.src = secondImageSpring;
-        currentImageSpring = secondImageSpring;
-    } else {
-        imgSpring.src = firstImageSpring;
-        currentImageSpring = firstImageSpring;
-    }
-});
+
+
+
+
+// // Autumn
+// const imgAutumn = document.querySelector('.img.changeDog');
+// const imgAutumnSrc = 'image/Chienlangue&nonlangue2alt.png';
+// const imgAutumnAltSrc = 'image/Chienlangue&nonlanguealt.png';
+
+// // Spring
+// const imgSpring = document.querySelector('.img.changeDog2');
+// const imgSpringSrc = 'image/Chienlangue&nonlangue2alt spring.png';
+// const imgSpringAltSrc = 'image/Chienlangue&nonlanguealt spring.png';
+
+// let imgSrc = imgAutumnSrc;
+
+// function toggleDogImage() {
+//     const img = document.querySelector('.img.changeDog');
+//     if (imgSrc === imgAutumnSrc) {
+//         img.src = imgSpringSrc;
+//         img.alt = "Chien qui tire la langue en mode printemps";
+//         imgSrc = imgSpringSrc;
+//     } else {
+//         img.src = imgAutumnSrc;
+//         img.alt = "Chien qui tire la langue en mode automne";
+//         imgSrc = imgAutumnSrc;
+//     }
+// }
+
+// document.querySelectorAll('.changeDog').forEach(button => {
+//     button.addEventListener('click', event => {
+//         toggleDogImage();
+//     });
+// });
